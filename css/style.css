@@ -1,0 +1,40 @@
+
+body{
+	text-align:center;
+	background:#f7f7f7;
+}
+
+
+.adroite{
+	text-align: center;
+}
+
+
+a#header-logo{
+	float:left;
+	width:150px;
+	height:50px;
+	background:url(http://www.topquizz.com/img/logo-header.png) top no-repeat;
+	background-size:100%;
+}
+
+h1 { 
+	color: navy;
+	text-align: center;
+}
+h2 { 
+	color: blue;
+}
+
+
+a.returnTOC
+{
+	text-align : center;
+	display : block;
+}
+
+div{
+	text-align:center;
+}
+
+
