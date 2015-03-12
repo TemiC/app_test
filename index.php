@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3a0bd375ee9ab61076257e29bc6dbb1b011c8df0
 <html>
 <body><h1>
 	<script>
