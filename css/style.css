@@ -1,14 +1,46 @@
 
 body{
 	text-align:center;
-	background:#f7f7f7;
+	background-color: #CCCCCC;
 }
 
 
 .adroite{
 	text-align: center;
 }
+#container{
+	position: absolute;
+	left: 50%;
+	width:700px;
+	height:430px;
+	margin-left: -350px;
+	top: 40px;
+	//border-width:1px;
+	border-style:ridge;
+	border-color:grey;
+	background:#f7f7f7;
+}
 
+#contain{
+	position: absolute;
+	left: 50%;
+	width:70px;
+	height:43px;
+	margin-left: -35px;
+	top: 40px;
+	border-width:1px;
+	border-style:ridge;
+	border-color:black;
+	background:#f7f7f7;
+	
+	
+}
+#navbar{
+	width:auto;
+	display:block; 
+	height:40px;
+	background-color: grey;
+}
 
 a#header-logo{
 	float:left;
