@@ -1,22 +1,22 @@
 
 <html>
-	<head> <title> ---- Readme ---- </title></head>
+	<head> <h1>--- Readme ---- </h1></head>
 <body>
 
     
     
     
-<h1>Nom de l'application </h1>
+<h2>Nom de l'application </h2>
 	
 	We found 404 Quiz !!! 
 
 
-<h1>Type d'application</h1> 
+<h2>Type d'application</h2> 
 
 	Il s'agit d'un quiz ludique et amusant très rapide et facilement utilisable.
 
 
-<h1>Description de l'application </h1>
+<h2>Description de l'application </h2>
 
 	l'application est un quiz pourtant sur les articles de la page We found 404. 
 	Ce quiz recupère des articles ou des vidéos de cette page et propose des questions
@@ -24,12 +24,11 @@
 	les editeurs du site. 
 
 
-<h1>Etape utilisateur </h1>
+<h2>Etape utilisateur </h2>
 
 	l'utilisateur devra:
-		- Se connecter sur Facebook pour pouvoir accéder au quiz pour cela il doit cliqué sur start the quiz et une fenêtre de 
-		  connection apparaitra.
-		- Accepter de donner quelques informations : nom, prenom, email etc...
+		- Se connecter sur Facebook pour pouvoir accéder au quiz pour cela il doit cliqué sur start the quiz et une fenêtre de connection apparaitra.
+		- Accepter de donner quelques informations : nom, prenom, email etc... 
 	
 		
 	l'utilisateur pourra:
@@ -38,7 +37,7 @@
 		- poster un commentaire 
 	
 	
-<h1>Developpement de l'application </h1>
+<h2>Developpement de l'application </h2>
 
 	coté Facebook 
 		- ajout des fonctionnalités de connection avec Facebook
@@ -53,6 +52,7 @@
 		- mémorisation des users en base
 			
 				
-Accessible via Heroku 
+<h2>Accessible via Heroku </h2>
+	 <a href="http://www.siteduzero.com"> Start the Quiz ! </a>
 
 </body></html>
