@@ -1,6 +1,6 @@
 
 <html>
-	<head> <h1>--- Readme ---- </h1></head>
+	<head> <center><h1>--- Readme ---- </h1></center></head>
 <body>
 
     
@@ -53,6 +53,6 @@
 			
 				
 <h2>Accessible via Heroku </h2>
-	 <a href="http://www.siteduzero.com"> Start the Quiz ! </a>
+	 <a href="http://www.monsite.com"> Start the Quiz ! </a>
 
 </body></html>
