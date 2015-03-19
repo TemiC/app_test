@@ -1,6 +1,6 @@
 
 <html>
-	<head> <center><h1>--- Readme ---- </h1></center></head>
+	<head> <h1>--- Readme ---- </h1></head>
 <body>
 
     
@@ -43,6 +43,7 @@
 		- ajout des fonctionnalités de connection avec Facebook
 		- retenir les infos d'un user dans la base de donnée 
 		- ajout du j'aime et du partage
+		- ajout des commentaires facebook 
 		
 		
 	coté technique
