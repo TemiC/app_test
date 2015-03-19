@@ -1,29 +1,60 @@
 # app_test
 
 
-<html><body><h1>
-	<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '656253677833609',
-      xfbml      : true,
-      version    : 'v2.2'
-    });
-  };
+<html>
+	<head> <title> ---- Readme ---- </title></head>
+<body>
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+    
+    
+    
+<h1>Nom de l'application </h1>
+	
+	We found 404 Quiz !!! 
 
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
+
+<h1>Type d'application</h1> 
+
+	Il s'agit d'un quiz ludique et amusant très rapide et facilement utilisable.
+
+
+<h1>Description de l'application </h1>
+
+	l'application est un quiz pourtant sur les articles de la page We found 404. 
+	Ce quiz recupère des articles ou des vidéos de cette page et propose des questions
+	et réponses à cochés. Il permet à l'utilisateur d'en apprendre plus sur les articles proposé par 
+	les editeurs du site. 
+
+
+<h1>Etape utilisateur </h1>
+
+	l'utilisateur devra:
+		- Se connecter sur Facebook pour pouvoir accéder au quiz pour cela il doit cliqué sur start the quiz et une fenêtre de 
+		  connection apparaitra.
+		- Accepter de donner quelques informations : nom, prenom, email etc...
+	
+		
+	l'utilisateur pourra:
+		- partager son score sur Facebook s'il le souhaite
+		- liker l'application 
+		- poster un commentaire 
+	
+	
+<h1>Developpement de l'application </h1>
+
+	coté Facebook 
+		- ajout des fonctionnalités de connection avec Facebook
+		- retenir les infos d'un user dans la base de donnée 
+		- ajout du j'aime et du partage
+		
+		
+	coté technique
+		- application codé en php
+		- ajout de petite partie en javascript afin d'optimiser le quiz
+		- mémorisation du score user à l'issue d'un premier quiz 
+		- mémorisation des users en base
+			
+				
+Accessible via Heroku 
+
 </body></html>
