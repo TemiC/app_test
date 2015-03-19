@@ -33,7 +33,7 @@
 		
 	l'utilisateur pourra:
 		- partager son score sur Facebook s'il le souhaite
-		- liker l'application 
+		- liker et partager l'application 
 		- poster un commentaire 
 	
 	
