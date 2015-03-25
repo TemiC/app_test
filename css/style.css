@@ -8,33 +8,21 @@ body{
 .adroite{
 	text-align: center;
 }
+
 #container{
 	position: absolute;
 	left: 50%;
-	width:700px;
-	height:430px;
+	width:750px;
+	height:450px;
 	margin-left: -350px;
 	top: 40px;
 	//border-width:1px;
 	border-style:ridge;
 	border-color:grey;
-	background:#f7f7f7;
+	//background:#f7f7f7;
+	background:white;
 }
 
-#contain{
-	position: absolute;
-	left: 50%;
-	width:70px;
-	height:43px;
-	margin-left: -35px;
-	top: 40px;
-	border-width:1px;
-	border-style:ridge;
-	border-color:black;
-	background:#f7f7f7;
-	
-	
-}
 #navbar{
 	width:auto;
 	display:block; 
@@ -54,13 +42,13 @@ h1 {
 	color: navy;
 	text-align: center;
 }
+
 h2 { 
 	color: blue;
 }
 
 
-a.returnTOC
-{
+a.returnTOC{
 	text-align : center;
 	display : block;
 }
@@ -69,4 +57,43 @@ div{
 	text-align:center;
 }
 
+#parent {
+	position : left;
+	width : 35px;
+	height :35px;
+ 
+}
 
+#score{
+	position: absolute;
+	left: 50%;
+	width:150px;
+	height:50px;
+	margin-left: -70px;
+	top: 70px;
+	border-style:ridge;
+	border-color:grey;
+	background:white;
+}
+
+#replay{
+	position: absolute;
+	left: 20%;
+	width:95px;
+	height:35px;
+	margin-left: -60px;
+	border-style:ridge;
+	border-color:grey;
+	background:white;
+}
+
+#save{
+	position: absolute;
+	right: 20%;
+	width:95px;
+	height:35px;
+	margin-left: -60px;
+	border-style:ridge;
+	border-color:grey;
+	background:white;
+}
