@@ -5,7 +5,7 @@
 	session_start();
 	$appId = '1560387527551071'; 
 	$appSecret = 'da15602cebc359bd7b49b4ff354950f0';
-	$redirectUrl = 'http://localhost/projectApp/quiz2.php'; 
+	$redirectUrl = 'http://hidden-retreat-3686.herokuapp.com/quiz2.php'; 
 	$permission = array('email');
 	
 	
