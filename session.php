@@ -16,8 +16,17 @@
 	use Facebook\FacebookRequestException;
 	use Facebook\GraphUser;
 
+	$dbname = 'quizz.db';
+	if(!class_exists('SQLite3'));
+	die('no supported');
 	
-
+	$base = new SQLite3($dbname);
+	if(!$base){
+		echo $base->LastErrorMsg();
+	}
+	else{
+		echo 'connect database ok';
+	}
 
 	FacebookSession::setDefaultApplication($appId, $appSecret); 
 	$helper = new FacebookRedirectLoginHelper($redirectUrl); 
