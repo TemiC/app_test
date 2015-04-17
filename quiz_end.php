@@ -17,10 +17,10 @@
 					</div>
 					<br><br>
 					<div id="replay">
-						REPLAY
+					<?php echo '<a href="http://localhost/projectApp/quiz2.php">REPLAY</a>'; ?>
 					</div>
 					<div id="save">
-						SAVE ME
+						SAVE ME 
 					</div>
 			<br><br><br><br><br><br><br><br><br><br>
 			<script>

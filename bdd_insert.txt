@@ -1,0 +1,26 @@
+
+root@yogesh-System-model:~# psql -h [**Host Name**] -U [**User Name**] [**database Name**]
+    Password for user hdwvhbehqlishy: ********
+    psql (8.4.9, server 9.0.5)
+    WARNING: psql version 8.4, server version 9.0.
+     Some psql features might not work.
+    SSL connection (cipher: DHE-RSA-AES256-SHA, bits: 256)
+    Type "help" for help.
+
+
+CREATE TABLE qcm (question text NOT NULL, rep1 character(100) NOT NULL, rep2 character(100) NOT NULL, rep3 character(100) NOT NULL, rep_juste character(100) NOT NULL, images character(60) NOT NULL, id serial NOT NULL, CONSTRAINT qcm_pkey PRIMARY KEY (id));
+
+
+CREATE TABLE user(name character(25) NOT NULL, mail character(50) NOT NULL, genre character(25) NOT NULL, uid serial NOT NULL,id_fb integer NOT NULL, CONSTRAINT user_pkey PRIMARY KEY (uid));
+
+
+
+INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images) VALUES ("Quel était le mot remplacé par "WE" ?", "Nut", "Not", "Nit","images/404.jpeg");
+
+
+
+INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, imagescreated_at)VALUES('Quel était le mot remplacé par "WE" ?', 'Nut', 'Not', 'Nit', 'Not''images/404.jpeg', now())
+INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, imagescreated_at)VALUES('Qu'est-ce que freepik ?', 'Un site web super genial pour tous les webdesigners', 'Un site de rencontre pour les hommes tous désespérés','Un site créé par des étudiants de la promo de Janvier de l'ESGI',Un site web super génial pour tous les web designers','images/freepik.jpg', now())
+INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, imagescreated_at)VALUES('Vers quel outils peut-on exporter nos projets Googl Code', 'Vers Githoub', 'Vers Gitub', 'Vers Github', 'Vers Github','images/github.jpg', now())
+INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, imagescreated_at)VALUES('Qu'est-ce-qu'est Netflix ?', 'Netflix est mon voisin du dessous à droite', 'Netflix est une plateforme de streaming', 'Netflix est un super virus provenant de la Russie', 'Netflix est une plateforme de streaming','images/netflix-logo.png', now())
+INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, imagescreated_at)VALUES('Comment s'appelle le clone libre de Siri', 'Ciri', 'Sirius', 'Siriri','Sirius','images/apple.jpg', now())

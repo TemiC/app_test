@@ -13,7 +13,7 @@
 					<br>
 					<img src="images/quizzi.jpg" width="430" height="250" alt="quiz" title="quiz" vspace="5" hspace="5"/>	
 					<div>			
-						<?php include('connection.php'); ?>
+						<?php require_once("connection.php"); ?> 
 					</div>
 			</div>
 	</body>
