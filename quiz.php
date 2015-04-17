@@ -17,8 +17,18 @@
 				
 				$nbQuestions = 2;
 				//require_once("connection_bdd.php");
-				require_once("MyDB");
+				//require_once("MyDB");
+				$dbname = 'quizz.db';
+				if(!class_exists('SQLite3'));
+				die('no supported');
 				
+				$base = new SQLite3($dbname);
+				if(!$base){
+					echo $base->LastErrorMsg();
+				}
+				else{
+					echo 'connect database ok';
+				}
 				
 				$nbRecord = pg_query($connexion,"SELECT * FROM quizz.qcm");  //select all the datas comming from the DB
 				$nbRecord = pg_num_rows($nbRecord);  //nb insertions in the DB
