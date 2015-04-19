@@ -33,8 +33,8 @@
 					//echo 'connect database ok';
 					require_once("MyDB");
 				}*/
-				echo "test1 et test2";
-				$dbhandle = sqlite_open('quizz.db');
+				echo "test1";
+				$dbhandle = sqlite3_open('quizz.db');
 				echo "test1bis";
 				if (!$dbhandle){
 					die ('error came');
