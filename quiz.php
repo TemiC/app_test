@@ -33,10 +33,11 @@
 					//echo 'connect database ok';
 					require_once("MyDB");
 				}*/
+				echo "test1";
 				$dbhandle = sqlite_open('quizz.db', 0666, $error);
 				if (!$dbhandle) 
 					die ($error);
-				
+				echo "test2";
 				$query = "SELECT * FROM qcm";
 				$result = sqlite_query($dbhandle, $query);
 				if (!$result) 
