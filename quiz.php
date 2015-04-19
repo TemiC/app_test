@@ -34,7 +34,7 @@
 					require_once("MyDB");
 				}*/
 				echo "test1";
-				$dbhandle = sqlite3_open('quizz.db');
+				$dbhandle = new SQLite3('quizz.db');
 				echo "test1bis";
 				if (!$dbhandle){
 					die ('error came');
