@@ -12,24 +12,8 @@ if(!$base){
 }
 else{
 	//echo 'connect database ok';
-	require_once("MyDB");
-}
-   /*class MyDB extends SQLite3
-   {
-      function __construct()
-      {
-         $this->open('quizz.db');
-      }
-   }
-   $db = new MyDB();
-   if(!$db){
-      echo $db->lastErrorMsg();
-   } 
-   else {
-      echo "Opened database successfully\n";
-   }*/
-   
-   $sql =<<<EOF
+	//require_once("MyDB");
+	$sql =<<<EOF
       CREATE TABLE qcm( 
 		question text NOT NULL,
 		rep1 char(100) NOT NULL,
@@ -48,6 +32,23 @@ EOF;
    else {
       echo "Table created successfully\n";
    }
+}
+   /*class MyDB extends SQLite3
+   {
+      function __construct()
+      {
+         $this->open('quizz.db');
+      }
+   }
+   $db = new MyDB();
+   if(!$db){
+      echo $db->lastErrorMsg();
+   } 
+   else {
+      echo "Opened database successfully\n";
+   }*/
+   
+   
  /*  
  $sql1 =<<<EOF
       CREATE TABLE qcm1( 
