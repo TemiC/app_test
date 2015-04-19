@@ -1,5 +1,20 @@
 <?php
-   class MyDB extends SQLite3
+
+$dbname = 'quizz.db';
+				
+var_dump(class_exists('SQLite3'));
+if(!class_exists('SQLite3'))
+	die('connection failed');
+
+$base = new SQLite3($dbname);
+if(!$base){
+	echo $base->LastErrorMsg();
+}
+else{
+	//echo 'connect database ok';
+	require_once("MyDB");
+}
+   /*class MyDB extends SQLite3
    {
       function __construct()
       {
@@ -12,7 +27,7 @@
    } 
    else {
       echo "Opened database successfully\n";
-   }
+   }*/
    
    $sql =<<<EOF
       CREATE TABLE qcm( 
@@ -26,14 +41,14 @@
 		);
 EOF;
 
- $ret = $db->exec($sql);
+ $ret = $base->exec($sql);
    if(!$ret){
-      echo $db->lastErrorMsg();
+      echo $base->lastErrorMsg();
    } 
    else {
       echo "Table created successfully\n";
    }
-   
+ /*  
  $sql1 =<<<EOF
       CREATE TABLE qcm1( 
 		question text NOT NULL,
@@ -131,6 +146,6 @@ EOF;
    } 
    else {
       echo "Table created successfully\n";
-   }
-   $db->close();
+   }*/
+   $base->close();
 ?>
