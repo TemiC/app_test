@@ -21,7 +21,7 @@ else{
 		rep3 char(100) NOT NULL,
 		rep_juste char(100) NOT NULL,
 		images character(60) NOT NULL,
-		id autoincrement PRIMARY KEY NOT NULL
+		id PRIMARY KEY AUTOINCREMENT
 		);
 EOF;
 
