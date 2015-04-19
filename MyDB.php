@@ -40,6 +40,8 @@ EOF;
    echo "Row inserted \n";
    $base->exec('INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce que freepik ?", "Un site web super genial pour tous les webdesigners", "Un site de rencontre pour les hommes tous désespérés","Un site créé par des étudiants de la promo de Janvier de lESGI","Un site web super génial pour tous les web designers","images/freepik.jpg")');
    echo "Row inserted \n";
+   
+    //$base->close();
 }
    /*class MyDB extends SQLite3
    {
@@ -156,5 +158,5 @@ EOF;
    else {
       echo "Table created successfully\n";
    }*/
-   $base->close();
+  
 ?>
