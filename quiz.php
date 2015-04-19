@@ -34,9 +34,9 @@
 					require_once("MyDB");
 				}*/
 				echo "test1";
-				$dbhandle = sqlite_open('quizz.db', 0666, $error);
+				$dbhandle = sqlite_open('quizz.db');
 				if (!$dbhandle) 
-					die ($error);
+					die ('error came');
 				echo "test2";
 				$query = "SELECT * FROM qcm";
 				$result = sqlite_query($dbhandle, $query);
