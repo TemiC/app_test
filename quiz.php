@@ -33,19 +33,19 @@
 					//echo 'connect database ok';
 					require_once("MyDB");
 				}*/
-				echo "test1";
 				$dbhandle = new SQLite3('quizz.db');
-				echo "test1bis";
 				if (!$dbhandle){
 					die ('error came');
 				}
 				else{
-					echo "test2";
-					$query = "SELECT * FROM qcm";
-					$result = sqlite_query($dbhandle, $query);
+					//$query = "SELECT * FROM qcm";
+					$result = $dbhandle->query('SELECT * FROM qcm');
 					if (!$result) 
 						die("Cannot execute query.");
-					$row = sqlite_fetch_array($result, SQLITE_ASSOC); 
+					while ($row = $result->fetchArray()) {
+						var_dump($row);
+					}
+					/*$row = sqlite_fetch_array($result, SQLITE_ASSOC); 
 					print_r($row);
 					echo "<br>";
 
@@ -57,7 +57,7 @@
 					sqlite_rewind($result);
 					$row = sqlite_fetch_array($result, SQLITE_BOTH); 
 					print_r($row);
-					echo "<br>";
+					echo "<br>";*/
 				}
 				sqlite_close($dbhandle);
 				
