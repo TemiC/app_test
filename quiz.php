@@ -19,8 +19,8 @@
 				//require_once("connection_bdd.php");
 				//require_once("MyDB");
 				$dbname = 'quizz.db';
-				if(!class_exists('SQLite3'));
-				die('test in ');
+				if(!class_exists('SQLite3'))
+				die('test in');
 				
 				$base = new SQLite3($dbname);
 				if(!$base){
