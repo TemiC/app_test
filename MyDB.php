@@ -13,6 +13,9 @@ if(!$base){
 else{
 	//echo 'connect database ok';
 	//require_once("MyDB");
+	
+	$base->exec('DROP TABLE IF EXISTS qcm');
+	
 	$sql =<<<EOF
       CREATE TABLE qcm( 
 		question text NOT NULL,
@@ -32,6 +35,9 @@ EOF;
    else {
       echo "Table created successfully\n";
    }
+   
+   $base->exec('INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not""images/404.jpeg")');
+   echo "Row inserted \n";
 }
    /*class MyDB extends SQLite3
    {
