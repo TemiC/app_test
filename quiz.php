@@ -35,6 +35,7 @@
 				}*/
 				echo "test1";
 				$dbhandle = sqlite_open('quizz.db');
+				echo "test1bis";
 				if (!$dbhandle){
 					die ('error came');
 				}
