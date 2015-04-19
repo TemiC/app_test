@@ -2,7 +2,7 @@
 
 $dbname = 'quizz.db';
 				
-var_dump(class_exists('SQLite3'));
+//var_dump(class_exists('SQLite3'));
 if(!class_exists('SQLite3'))
 	die('connection failed');
 
@@ -38,7 +38,7 @@ EOF;
    
    $base->exec('INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not""images/404.jpeg")');
    $base->exec('INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce que freepik ?", "Un site web super genial pour tous les webdesigners", "Un site de rencontre pour les hommes tous désespérés","Un site créé par des étudiants de la promo de Janvier de lESGI","Un site web super génial pour tous les web designers","images/freepik.jpg")');
-  
+   var_dump($base);
    
     $base->close();
 }
