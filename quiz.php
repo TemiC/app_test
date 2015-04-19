@@ -39,7 +39,7 @@
 				}
 				else{
 					//$query = "SELECT * FROM qcm";
-					$result = $dbhandle->query('SELECT * FROM qcm');
+					$result = $dbhandle->query('SELECT * FROM qcm WHERE id = 1');
 					if (!$result) 
 						die("Cannot execute query.");
 					while ($row = $result->fetchArray()) {
