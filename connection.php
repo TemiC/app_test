@@ -31,8 +31,9 @@
 		if (!$dbhandle){
 			die ('error came');
 		}
+	}
 		//$query = 'SELECT * FROM user WHERE id_fb ='$id_fb'';
-		$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'')
+	/*	$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'')
 		//$check = pg_num_rows($check); 
 		if (!$query) 
 			die("Cannot execute query.");
@@ -52,7 +53,7 @@
 			$query = 'UPDATE user SET name='$name', mail='$mail', genre='$genre' WHERE  id_fb ='$id_fb''
 			$dbhandle->exec($query);
 		}
-	  }
+	  }*/
 	}
 	else {
 		$loginUrl = $helper->getLoginUrl($permission);
