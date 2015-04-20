@@ -11,7 +11,8 @@
 		catch(FacebookRequestException $e) {
 		} 
 		
-		require_once("connection_bdd.php");
+	//	require_once("connection_bdd.php");
+		$_SESSION['fb_token'] = (string) $session->getAccessToken();
 		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());  //get user informations 
 		$name = $user_profile->getProperty('name');
 		$mail = $user_profile->getProperty('email');
