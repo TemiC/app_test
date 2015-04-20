@@ -12,7 +12,7 @@
 		} 
 		
 		require_once("MyDB.php");
-		$_SESSION['fb_token'] = (string) $session->getAccessToken();
+		/*$_SESSION['fb_token'] = (string) $session->getAccessToken();
 		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());  //get user informations 
 		$name = $user_profile->getProperty('name');
 		$mail = $user_profile->getProperty('email');
@@ -29,7 +29,7 @@
 			die ('error came');
 		}
 	
-	/*function ckeckUser($id_fb, $genre, $mail, $name){
+	function ckeckUser($id_fb, $genre, $mail, $name){
 		
 		//$query = 'SELECT * FROM user WHERE id_fb ='$id_fb'';
 		$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'')
