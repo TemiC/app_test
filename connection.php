@@ -24,13 +24,13 @@
 		$_SESSION['genre'] = $genre;
 		$_SESSION['id_fb'] = $id_fb;
 		
+		
+	
+	function ckeckUser($id_fb, $genre, $mail, $name){
 		$dbhandle = new SQLite3('quizz.db');
 		if (!$dbhandle){
 			die ('error came');
 		}
-	
-	/*function ckeckUser($id_fb, $genre, $mail, $name){
-		
 		//$query = 'SELECT * FROM user WHERE id_fb ='$id_fb'';
 		$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'')
 		//$check = pg_num_rows($check); 
@@ -52,7 +52,7 @@
 			$query = 'UPDATE user SET name='$name', mail='$mail', genre='$genre' WHERE  id_fb ='$id_fb''
 			$dbhandle->exec($query);
 		}
-	  }*/
+	  }
 	}
 	else {
 		$loginUrl = $helper->getLoginUrl($permission);
