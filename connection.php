@@ -11,8 +11,8 @@
 		catch(FacebookRequestException $e) {
 		} 
 		
-	//	require_once("connection_bdd.php");
-	/*	$_SESSION['fb_token'] = (string) $session->getAccessToken();
+		require_once("MyDB.php");
+		$_SESSION['fb_token'] = (string) $session->getAccessToken();
 		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());  //get user informations 
 		$name = $user_profile->getProperty('name');
 		$mail = $user_profile->getProperty('email');
@@ -26,17 +26,32 @@
 	
 	
 	function ckeckUser($id_fb, $genre, $mail, $name){
-		$check =  pg_query($connexion,"SELECT * FROM quizz.user WHERE id_fb ='$id_fb'");
-		$check = pg_num_rows($check); 
-		if(empty($check)){
+		$dbhandle = new SQLite3('quizz.db');
+		if (!$dbhandle){
+			die ('error came');
+		}
+		//$query = 'SELECT * FROM user WHERE id_fb ='$id_fb'';
+		$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'')
+		//$check = pg_num_rows($check); 
+		if (!$query) 
+			die("Cannot execute query.");
+		while ($row = $query->fetchArray()) {
+			var_dump($row);
+		}
+		if(empty($query)){
 			//$query = " INSERT INTO quizz.user( name, mail, genre, id_fb) VALUES('$name','$mail', '$genre','id_fb');"
-			pg_query($connexion," INSERT INTO quizz.user( name, mail, genre, id_fb) VALUES('$name','$mail', '$genre','id_fb');");
+			//pg_query($connexion," INSERT INTO quizz.user( name, mail, genre, id_fb) VALUES('$name','$mail', '$genre','id_fb');");
+			$query = 'INSERT INTO user( name, mail, genre, id_fb) VALUES('$name','$mail', '$genre','$id_fb')';
+			$dbhandle->exec($query);
+			var_dump($dbhandle);
 		}
 		else{
 			//$query = "UPDATE quizz.user SET name='$name', mail='$mail', genre='$genre' WHERE  id_fb ='$id_fb'"
-			pg_query($connexion,"UPDATE quizz.user SET name='$name', mail='$mail', genre='$genre' WHERE  id_fb ='$id_fb'");
+			//pg_query($connexion,"UPDATE quizz.user SET name='$name', mail='$mail', genre='$genre' WHERE  id_fb ='$id_fb'");
+			$query = 'UPDATE user SET name='$name', mail='$mail', genre='$genre' WHERE  id_fb ='$id_fb''
+			$dbhandle->exec($query);
 		}
-	  }*/
+	  }
 	}
 	else {
 		$loginUrl = $helper->getLoginUrl($permission);

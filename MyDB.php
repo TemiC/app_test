@@ -42,6 +42,27 @@ EOF;
    $base->exec($query1);
    //var_dump($base);
    
+   
+	$base->exec('DROP TABLE IF EXISTS user');
+	
+	$sql =<<<EOF
+      CREATE TABLE user( 
+		name char(5O) NOT NULL,
+		mail char(100) NOT NULL,
+		genre char(25) NOT NULL,
+		id_fb char(100) NOT NULL,
+		id INTEGER PRIMARY KEY AUTOINCREMENT
+		);
+EOF;
+
+ $ret = $base->exec($sql);
+   if(!$ret){
+      echo $base->lastErrorMsg();
+   } 
+   else {
+      echo "Table created successfully\n";
+   }
+   
     $base->close();
 }
    /*class MyDB extends SQLite3
