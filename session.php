@@ -6,7 +6,7 @@
 	$appId = '1560387527551071'; 
 	$appSecret = 'da15602cebc359bd7b49b4ff354950f0';
 	///$redirectUrl = 'http://localhost/quiz.php'; 
-	$redirectUrl = http://hidden-retreat-3686.herokuapp.com/quiz.php
+	$redirectUrl = 'http://hidden-retreat-3686.herokuapp.com/quiz.php';
 	$permission = array('email');
 	
 	
@@ -16,17 +16,6 @@
 	use Facebook\FacebookRequestException;
 	use Facebook\GraphUser;
 
-	$dbname = 'quizz.db';
-	if(!class_exists('SQLite3'));
-	die('no supported');
-	
-	$base = new SQLite3($dbname);
-	if(!$base){
-		echo $base->LastErrorMsg();
-	}
-	else{
-		echo 'connect database ok';
-	}
 
 	FacebookSession::setDefaultApplication($appId, $appSecret); 
 	$helper = new FacebookRedirectLoginHelper($redirectUrl); 
