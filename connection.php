@@ -11,33 +11,7 @@
 		catch(FacebookRequestException $e) {
 		} 
 		
-		require_once("MyDB.php");
-		$_SESSION['fb_token'] = (string) $session->getAccessToken();
-		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());  //get user informations 
-		$name = $user_profile->getProperty('name');
-		$mail = $user_profile->getProperty('email');
-		$genre = $user_profile->getProperty('gender');
-		$id_fb = $user_profile->getProperty('id');
 		
-		$_SESSION['name'] = $name;
-		$_SESSION['mail'] = $mail;
-		$_SESSION['genre'] = $genre;
-		$_SESSION['id_fb'] = $id_fb;
-		
-		
-	
-	function ckeckUser($id_fb, $genre, $mail, $name){
-		$dbhandle = new SQLite3('quizz.db');
-		if (!$dbhandle){
-			die ('error came');
-		}
-		$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ="$id_fb"');
-		if (!$query) 
-			die("Cannot execute query.");
-		while ($row = $query->fetchArray()) {
-			var_dump($row);
-		}
-	}
 		//$query = 'SELECT * FROM user WHERE id_fb ='$id_fb'';
 	/*	$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'')
 		//$check = pg_num_rows($check); 

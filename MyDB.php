@@ -40,7 +40,7 @@ EOF;
    $query1 = 'INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce que freepik ?", "Un site web super genial pour tous les webdesigners", "Un site de rencontre pour les hommes tous désespérés","Un site créé par des étudiants de la promo de Janvier de lESGI","Un site web super génial pour tous les web designers","images/freepik.jpg")';
    $base->exec($query);
    $base->exec($query1);
-   //var_dump($base);
+   var_dump($base);
    
    
 	$base->exec('DROP TABLE IF EXISTS user');
