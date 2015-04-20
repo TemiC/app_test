@@ -12,7 +12,7 @@
 		} 
 		
 	//	require_once("connection_bdd.php");
-		$_SESSION['fb_token'] = (string) $session->getAccessToken();
+	/*	$_SESSION['fb_token'] = (string) $session->getAccessToken();
 		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());  //get user informations 
 		$name = $user_profile->getProperty('name');
 		$mail = $user_profile->getProperty('email');
@@ -36,7 +36,7 @@
 			//$query = "UPDATE quizz.user SET name='$name', mail='$mail', genre='$genre' WHERE  id_fb ='$id_fb'"
 			pg_query($connexion,"UPDATE quizz.user SET name='$name', mail='$mail', genre='$genre' WHERE  id_fb ='$id_fb'");
 		}
-	  }
+	  }*/
 	}
 	else {
 		$loginUrl = $helper->getLoginUrl($permission);
