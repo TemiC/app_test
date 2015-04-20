@@ -31,6 +31,12 @@
 		if (!$dbhandle){
 			die ('error came');
 		}
+		$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'');
+		if (!$query) 
+			die("Cannot execute query.");
+		while ($row = $query->fetchArray()) {
+			var_dump($row);
+		}
 	}
 		//$query = 'SELECT * FROM user WHERE id_fb ='$id_fb'';
 	/*	$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'')
