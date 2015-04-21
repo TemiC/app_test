@@ -33,7 +33,7 @@ EOF;
       echo $base->lastErrorMsg();
    } 
    else {
-      echo "Table created successfully\n";
+      echo "Table qcm created successfully\n";
    }
    
    $query = 'INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not""images/404.jpeg")';
@@ -60,7 +60,7 @@ EOF;
       echo $base->lastErrorMsg();
    } 
    else {
-      echo "Table created successfully\n";
+      echo "Table user created successfully\n";
    }
    
     $base->close();
