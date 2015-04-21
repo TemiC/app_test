@@ -15,6 +15,7 @@ else{
 	//require_once("MyDB");
 	
 	$base->exec('DROP TABLE IF EXISTS qcm');
+	$base->exec('DROP TABLE IF EXISTS user');
 	
 	$sql =<<<EOF
       CREATE TABLE qcm( 
@@ -26,32 +27,23 @@ else{
 		images character(60) NOT NULL,
 		id INTEGER PRIMARY KEY AUTOINCREMENT
 		);
-EOF;
-
- $ret = $base->exec($sql);
-   if(!$ret){
-      echo $base->lastErrorMsg();
-   } 
-   else {
-      echo "Table qcm created successfully\n";
-   }
-   
-   $query = 'INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not""images/404.jpeg")';
-   $query1 = 'INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce que freepik ?", "Un site web super genial pour tous les webdesigners", "Un site de rencontre pour les hommes tous désespérés","Un site créé par des étudiants de la promo de Janvier de lESGI","Un site web super génial pour tous les web designers","images/freepik.jpg")';
-   $base->exec($query);
-   $base->exec($query1);
-  
-   
-   
-	$base->exec('DROP TABLE IF EXISTS user');
-	
-	$sql =<<<EOF
-      CREATE TABLE user( 
+		
+		CREATE TABLE user( 
 		name char(5O) NOT NULL,
 		mail char(100) NOT NULL,
 		genre char(25) NOT NULL,
 		id_fb char(100) NOT NULL,
 		id INTEGER PRIMARY KEY AUTOINCREMENT
+		);
+		  
+		 CREATE TABLE qcm1( 
+		question text NOT NULL,
+		rep1 char(100) NOT NULL,
+		rep2 char(100) NOT NULL,
+		rep3 char(100) NOT NULL,
+		rep_juste char(100) NOT NULL,
+		images character(60) NOT NULL,
+		id autoincrement PRIMARY KEY NOT NULL
 		);
 EOF;
 
@@ -60,12 +52,17 @@ EOF;
       echo $base->lastErrorMsg();
    } 
    else {
-      echo "Table user created successfully\n";
+      echo "All table created successfully\n";
    }
    
-    var_dump($base);
-    $base->close();
-}
+   $query = 'INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not""images/404.jpeg")';
+   $query1 = 'INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce que freepik ?", "Un site web super genial pour tous les webdesigners", "Un site de rencontre pour les hommes tous désespérés","Un site créé par des étudiants de la promo de Janvier de lESGI","Un site web super génial pour tous les web designers","images/freepik.jpg")';
+   $base->exec($query);
+   $base->exec($query1);
+   var_dump($base);
+   
+   
+
    /*class MyDB extends SQLite3
    {
       function __construct()
