@@ -15,20 +15,18 @@
 		$_SESSION['fb_token'] = (string) $session->getAccessToken();
 		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());  //get user informations 
 		$name = $user_profile->getProperty('name');
-		$fname = $user_profile->getProperty('fname');
 		$mail = $user_profile->getProperty('email');
 		$genre = $user_profile->getProperty('gender');
 		$id_fb = $user_profile->getProperty('id');
 		
 		$_SESSION['name'] = $name;
-		$_SESSION['fname'] = $fname;
 		$_SESSION['mail'] = $mail;
 		$_SESSION['genre'] = $genre;
 		$_SESSION['id_fb'] = $id_fb;
 		
 		
 	
-	function ckeckUser($id_fb, $genre, $mail, $name, $fname){
+	function ckeckUser($id_fb, $genre, $mail, $name){
 		$dbhandle = new SQLite3('quizz.db');
 		if (!$dbhandle){
 			die ('error came');
@@ -39,14 +37,11 @@
 		while ($row = $query->fetchArray()) {
 			var_dump($row);
 		}
-		$query = 'INSERT INTO user( name, mail, genre, id_fb) VALUES('$name','$mail', '$genre','$id_fb')';
-		$dbhandle->exec($query);
-		
-		/*if(empty($query)){
-			$query = ('INSERT INTO user( name, mail, genre, id_fb) VALUES("'.$name.'","'.$fname.'","'.$mail.'", "'.$genre.'","'.$id_fb.'")';)
-			$result = $dbhandle->exec($query);
+		if(empty($query)){
+			$query = 'INSERT INTO user( name, mail, genre, id_fb) VALUES("$name","$mail", "$genre","$id_fb")';
+			$dbhandle->exec($query);
 			var_dump($dbhandle);
-		}*/
+		}
 	}
 		//$query = 'SELECT * FROM user WHERE id_fb ='$id_fb'';
 	/*	$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'')
