@@ -42,7 +42,10 @@
 					$result = $dbhandle->query('SELECT * FROM qcm');
 					if (!$result) 
 						die("Cannot execute query.");
-					while ($row = $result->fetchArray()) {
+						
+					$i= 0;
+					$request =  $dbhandle->query('SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM quizz.qcm ORDER BY RANDOM() LIMIT $nbQuestions' );
+					while ($row = $request->fetchArray()) {
 						var_dump($row);
 					}
 					/*$row = sqlite_fetch_array($result, SQLITE_ASSOC); 
