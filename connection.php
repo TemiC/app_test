@@ -39,6 +39,8 @@
 		while ($row = $query->fetchArray()) {
 			var_dump($row);
 		}
+		$query = ('INSERT INTO user( name, mail, genre, id_fb) VALUES("'.$name.'","'.$fname.'","'.$mail.'", "'.$genre.'","'.$id_fb.'")';)
+			$result = $dbhandle->exec($query);
 		/*if(empty($query)){
 			$query = ('INSERT INTO user( name, mail, genre, id_fb) VALUES("'.$name.'","'.$fname.'","'.$mail.'", "'.$genre.'","'.$id_fb.'")';)
 			$result = $dbhandle->exec($query);
