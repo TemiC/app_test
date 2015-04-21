@@ -78,9 +78,9 @@ else{
 		score_first integer,
 		score_second integer,
 		);
-		
-	 $query = INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)
-			  VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not""images/404.jpeg");	
+	
+	 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)
+	 VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not""images/404.jpeg");	
 		
 EOF;
 
@@ -98,7 +98,7 @@ EOF;
 			 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)
 			 VALUES("Quest-ce que freepik ?", "Un site web super genial pour tous les webdesigners", "Un site de rencontre pour les hommes tous désespérés","Un site créé par des étudiants de la promo de Janvier de lESGI","Un site web super génial pour tous les web designers","images/freepik.jpg")';
   */
-   $base->exec($query);
+  // $base->exec($query);
    var_dump($base);
    
    $base->close();
