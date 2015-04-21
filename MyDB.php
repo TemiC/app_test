@@ -15,7 +15,7 @@ else{
 	//require_once("MyDB");
 	
 	$base->exec('DROP TABLE IF EXISTS qcm');
-	$base->exec('DROP TABLE IF EXISTS user');
+	//$base->exec('DROP TABLE IF EXISTS user');
 	
 	$sql =<<<EOF
       CREATE TABLE qcm( 
