@@ -16,36 +16,20 @@
 			<?php 
 				
 				$nbQuestions = 2;
-				//require_once("connection_bdd.php");
 				require_once("MyDB.php");
 				
-				/*$dbname = 'quizz.db';
-				
-				var_dump(class_exists('SQLite3'));
-				if(!class_exists('SQLite3'))
-				die('connection failed');
-				
-				$base = new SQLite3($dbname);
-				if(!$base){
-					echo $base->LastErrorMsg();
-				}
-				else{
-					//echo 'connect database ok';
-					require_once("MyDB");
-				}*/
 				$dbhandle = new SQLite3('quizz.db');
 				if (!$dbhandle){
 					die ('error came');
 				}
 				else{
-					//$query = "SELECT * FROM qcm";
 					$result = $dbhandle->query('SELECT * FROM qcm');
 					if (!$result) 
 						die("Cannot execute query.");
 						
 					$i= 0;
 					$request =  $dbhandle->query('SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM qcm ORDER BY RANDOM() LIMIT $nbQuestions' );
-					while ($row = $request->fetchArray()) {
+					while ($row = $request->fetchArray(SQLITE3_ASSOC)) {
 						var_dump($row);
 					}
 					/*$row = sqlite_fetch_array($result, SQLITE_ASSOC); 
