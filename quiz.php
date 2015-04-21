@@ -28,8 +28,8 @@
 						die("Cannot execute query.");
 						
 					$i= 0;
-					$request =  $dbhandle->query('SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM qcm ORDER BY RANDOM() LIMIT $nbQuestions' );
-					while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+					$request =  $dbhandle->query('SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM qcm ORDER BY RANDOM() LIMIT "$nbQuestions"' );
+					while ($row = $request->fetchArray(SQLITE3_ASSOC)) {
 						var_dump($row);
 					}
 					/*$row = sqlite_fetch_array($result, SQLITE_ASSOC); 
