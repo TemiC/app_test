@@ -28,7 +28,7 @@ else{
 		id INTEGER PRIMARY KEY AUTOINCREMENT
 		);
 		
-		CREATE TABLE user( 
+	  CREATE TABLE user( 
 		name char(5O) NOT NULL,
 		mail char(100) NOT NULL,
 		genre char(25) NOT NULL,
@@ -36,7 +36,7 @@ else{
 		id INTEGER PRIMARY KEY AUTOINCREMENT
 		);
 		  
-		 CREATE TABLE qcm1( 
+	   CREATE TABLE qcm1( 
 		question text NOT NULL,
 		rep1 char(100) NOT NULL,
 		rep2 char(100) NOT NULL,
