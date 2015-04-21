@@ -80,7 +80,7 @@ else{
 		);
 		
 		INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)
-		VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not""images/404.jpeg");
+		VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not","images/404.jpeg");
 			 
 		
 		

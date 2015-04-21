@@ -37,11 +37,11 @@
 		while ($row = $query->fetchArray()) {
 			var_dump($row);
 		}
-		if(empty($query)){
+		//if(empty($query)){
 			//$query = 'INSERT INTO user( name, mail, genre, id_fb) VALUES("$name","$mail", "$genre","$id_fb")';
-			$dbhandle->exec($query);
-			var_dump($dbhandle);
-		}
+			//$dbhandle->exec($query);
+			//var_dump($dbhandle);
+		//}
 	}
 		//$query = 'SELECT * FROM user WHERE id_fb ='$id_fb'';
 	/*	$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'')
