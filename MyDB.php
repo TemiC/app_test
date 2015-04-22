@@ -93,8 +93,9 @@ EOF;
       echo "All table created successfully\n";
    }
    
-  // $query = ''
-  $result = $base->exec($query);
+  //$query = 'SELECT * FROM qcm';
+  $result = $dbhandle->query('SELECT * FROM qcm');
+  //$result = $base->exec($query);
   while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 	echo 'test in';
 	var_dump($row);
