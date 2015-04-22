@@ -93,8 +93,7 @@ EOF;
    				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("test ?", "test", "test", "test", "test", "images/404.jpeg");';
       //$result = $dbhandle->query('SELECT * FROM qcm');
 	  $result = $base->exec($query);
-	  var_dump($base);
-	  echo "test out \n";
+	  //var_dump($base);
    }
    
   //$query = 'SELECT * FROM qcm';
