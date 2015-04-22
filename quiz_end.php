@@ -22,11 +22,13 @@
 					<div id="save">
 						SAVE ME 
 					</div>
-			<br><br><br><br><br><br><br><br><br><br>
 
 
 
 			<?php
+
+				require('facebook-php-sdk-v4-4.0-dev/autoload.php'); 
+				
 				$api = file_get_contents('http://graph.facebook.com/[https://www.facebook.com/wefound404?fref=nf]'); // On récupère la page de l'API facebook
 				$likes = json_decode($api); // On décode le JSON renvoyé
 				$likes = $likes->likes; // On récupère la valeur de "likes"
