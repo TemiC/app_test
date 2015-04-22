@@ -33,9 +33,9 @@
 						//var_dump($row);
 
 
-					?>
+			?>
 
-					<FORM name="quiz" method="post" action="score1.php" enctype="multipart/form-data">
+				<FORM name="quiz" method="post" action="score1.php" enctype="multipart/form-data">
 							<h2> <?php 
 								$i++;
 								echo $i.')'.$data['question']; 
@@ -82,14 +82,15 @@
 
 			<?php
 					}
-
-				}
-				sqlite_close($dbhandle);
 			?>
 			<br>
-							<INPUT name="entrer" type="submit" value="Soumettre" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
-							<INPUT name="Annuler" type="reset" value="Annuler" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
+				<INPUT name="entrer" type="submit" value="Soumettre" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
+				<INPUT name="Annuler" type="reset" value="Annuler" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
 		</FORM>
+		<?php
+			}
+			sqlite_close($dbhandle);
+		?>
 		</div>
 	</body>
 </html>
