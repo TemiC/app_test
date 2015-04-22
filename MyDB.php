@@ -32,10 +32,10 @@ else{
 		);
 		
 	  CREATE TABLE user( 
-		name char(50) NOT NULL,
+		fname char(50) NOT NULL,
+		lname char(50) NOT NULL,
 		mail char(100) NOT NULL,
 		genre char(25) NOT NULL,
-		id_fb char(100) NOT NULL,
 		id INTEGER PRIMARY KEY AUTOINCREMENT
 		);
 		
