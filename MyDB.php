@@ -90,7 +90,7 @@ EOF;
    else {
       echo "All table created successfully\n";
       $query = ' INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not", "images/404.jpeg");
-   				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("test ?", "test", "test", "test", "test", "images/404.jpeg");
+   				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce que freepik ?", "Un site web super genial pour tous les webdesigners", "Un site de rencontre pour les hommes tous désespérés","Un site créé par des étudiants de la promo de Janvier de lESGI","Un site web super génial pour tous les web designers","images/freepik.jpg");
    				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("test2 ?", "test2", "test2", "test2", "test2", "images/404.jpeg");';
       //$result = $dbhandle->query('SELECT * FROM qcm');
 	  $result = $base->exec($query);
