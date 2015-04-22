@@ -93,8 +93,8 @@ EOF;
    $query = 'INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not ,"images/404.jpeg"),
    			 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not ,"images/404.jpeg")';
 			
-   $result = $base->exec($query);
-   var_dump($result);
+   $base->exec($query);
+   //var_dump($result);
  
 
    
