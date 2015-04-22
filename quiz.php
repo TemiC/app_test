@@ -19,10 +19,10 @@
 				require_once("MyDB.php");
 				
 				$dbhandle = new SQLite3('quizz.db');
-				//if (!$dbhandle){
-				//	die ('error came');
-				//}
-				//else{
+				if (!$dbhandle){
+					die ('error came');
+				}
+				else{
 					$userdata = $dbhandle->query('SELECT name FROM user');
 					if (!$userdata) 
 						die("Cannot execute query.");
@@ -88,7 +88,7 @@
 												?> "/>
 
 			<?php
-		
+					}
 				}
 			?>
 			<br>
