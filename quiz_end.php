@@ -13,7 +13,7 @@
 				<h1>YOUR SCORE </h1>
 					<div id="score">
 						<br>
-						500/500	
+						...
 					</div>
 					<br><br>
 					<div id="replay">
@@ -40,13 +40,12 @@
 					} 
 			
 
-				$api = file_get_contents('http://graph.facebook.com/https://www.facebook.com/wefound404?fref=nf'); // On récupère la page de l'API facebook
-				$likes = json_decode($api); // On décode le JSON renvoyé
-				$likes = $likes->likes; // On récupère la valeur de "likes"
-				$likes = (string)$likes; // On en fait une chaîne de caractères
-				echo $likes; // On l'affiche
-
-			}
+					$api = file_get_contents('http://graph.facebook.com/https://www.facebook.com/wefound404?fref=nf'); // On récupère la page de l'API facebook
+					$likes = json_decode($api); // On décode le JSON renvoyé
+					$likes = $likes->likes; // On récupère la valeur de "likes"
+					$likes = (string)$likes; // On en fait une chaîne de caractères
+					echo $likes; // On l'affiche
+				}
 
 			?>
 
