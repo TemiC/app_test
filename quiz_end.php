@@ -27,9 +27,12 @@
 
 
 			<?php
-
+				echo "test1";
 				require('facebook-php-sdk-v4-4.0-dev/autoload.php'); 
 				require_once("session.php"); 
+
+				echo "test2";
+				
 				if(isset($session)) {
 					try {	
 						$user_profile = (new FacebookRequest(
@@ -46,6 +49,8 @@
 					$likes = (string)$likes; // On en fait une chaîne de caractères
 					echo $likes; // On l'affiche
 				}
+
+				echo "test3";
 
 			?>
 
