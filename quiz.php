@@ -29,7 +29,7 @@
 						
 					$i= 0;
 					$request =  $dbhandle->query('SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM qcm ORDER BY RANDOM() LIMIT 2' );
-					while ($row = $request->fetchArray(SQLITE3_ASSOC)) {
+					while ($data = $request->fetchArray(SQLITE3_ASSOC)) {
 						//var_dump($row);
 
 
