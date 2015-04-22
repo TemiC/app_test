@@ -112,7 +112,7 @@ EOF;
    				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce quest ai2html ?", "Un IDE consacré html", "Un script pour Adobe Illustrator", "Un script pour Photoshop","Un script pour Adobe Illustrator","images/illustrator.jpg");
    				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("GetStrike est à la fois un moteur de recherche et ... ?", "Une API pour chercher des torrents à la vitesse de la lumière", "Un réseau social pour se faire des amis", "Un resto pas cher","Une API pour chercher des torrents à la vitesse de la lumière","images/getStrike.jpg");
    				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("La première course connectée est un soutien vers quel organisme ?", "Les restos du coeur", "UNICEF", "La croix rouge","UNICEF","images/course.jpg");
-   				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("La série Vickings recherches combien de nouveau figurants ?", "800", "8000", "80","8000","images/Vickings.jpg");
+   				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("La série Vickings recherches combien de nouveau figurants ?", "800", "8000", "80","8000","images/vickings.jpg");
    				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("PHP 7.x sera la prochaine version de PHP, quelle était la précedente ?", "PHP 6.x", "PHP 4.x", "PHP 5.x","PHP 5.x","images/php.jpg");
    				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel futur réseau socia sera bientôt constitué de publicité ?", "Facebook", "Instagram", "Twitter","Instagram","images/reseau-sociaux.jpg");';
       //$result = $dbhandle->query('SELECT * FROM qcm');
