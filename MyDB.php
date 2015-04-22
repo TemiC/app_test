@@ -95,7 +95,7 @@ EOF;
    $base->exec($query);
    var_dump($base);
    
-   $base->close();
+   //$base->close();
 	
 }
   
