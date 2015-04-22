@@ -32,7 +32,7 @@
 					while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 						echo 'test in';
 						var_dump($row);
-					//}
+					}
 					/*$row = sqlite_fetch_array($result, SQLITE_ASSOC); 
 					print_r($row);
 					echo "<br>";
