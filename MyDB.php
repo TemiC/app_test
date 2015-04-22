@@ -78,9 +78,7 @@ else{
 		uid INTEGER PRIMARY KEY AUTOINCREMENT
 		);
 		
-		INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not", "images/404.jpeg");
-   		INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not", "images/404.jpeg");
-			
+		
 		
 		
 EOF;
@@ -91,12 +89,10 @@ EOF;
    } 
    else {
       echo "All table created successfully\n";
-      $result = $dbhandle->query('SELECT * FROM qcm');
-	  //$result = $base->exec($query);
-	  while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-		echo 'test in';
-		var_dump($row);
-	  }
+      $query = ' INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not", "images/404.jpeg");
+   				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not", "images/404.jpeg");';
+      //$result = $dbhandle->query('SELECT * FROM qcm');
+	  $result = $base->exec($query);
 	  var_dump($base);
 	  echo "test out \n";
    }
