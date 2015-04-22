@@ -11,7 +11,7 @@
 			<div id="parent">
 				<img src= "images/404.jpeg" width="100" height="100" alt="quiz" title="logo" vspace="5" hspace="5"/>
 			</div>
-			<h1> QUIZ WE FOUNDFAN </h1>
+			<h1> QUIZ WE FOUND 404 FAN </h1>
 			
 			<?php 
 				
