@@ -30,7 +30,15 @@
 
 				echo "test2\n";
 				
-				if(isset($session)) {}
+				if(isset($session)) {
+					try {	
+						$user_profile = (new FacebookRequest(
+						$session, 'GET', '/me'
+						))->execute()->getGraphObject(GraphUser::className());
+					} 
+					catch(FacebookRequestException $e) {
+					} 
+				}
 					/*try {	
 						$user_profile = (new FacebookRequest(
 						$session, 'GET', '/me'
