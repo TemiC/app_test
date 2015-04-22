@@ -28,10 +28,10 @@
 				echo "test1\n";
 				require_once("session.php"); 
 
-				/*echo "test2\n";
+				echo "test2\n";
 				
-				if(isset($session)) {
-					try {	
+				if(isset($session)) {}
+					/*try {	
 						$user_profile = (new FacebookRequest(
 						$session, 'GET', '/me'
 						))->execute()->getGraphObject(GraphUser::className());
