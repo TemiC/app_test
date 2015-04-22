@@ -45,7 +45,7 @@
 					session_destroy();
 				}
 	else {
-		$loginUrl = $helper->getLoginUrl($permission);
-		echo '<a href="'.$loginUrl.'">Click here to !!</a>';
+		$url = $helper->getLoginUrl(['email','user_photos']);
+		echo "Veuillez vous connecter en <a href='".$url."'>cliquant ici</a>";
 	}
 ?>
