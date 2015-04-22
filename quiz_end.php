@@ -28,7 +28,6 @@
 
 			<?php
 				echo "test1\n";
-				require('facebook-php-sdk-v4-4.0-dev/autoload.php'); 
 				require_once("session.php"); 
 
 				/*echo "test2\n";
