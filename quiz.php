@@ -27,36 +27,15 @@
 					if (!$result) 
 						die("Cannot execute query.");
 						
-					//$i= 0;
+					$i= 0;
 					$request =  $dbhandle->query('SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM qcm ORDER BY RANDOM() LIMIT 2' );
 					while ($row = $request->fetchArray(SQLITE3_ASSOC)) {
-						//echo 'test in';
 						var_dump($row);
-					}
-					/*$row = sqlite_fetch_array($result, SQLITE_ASSOC); 
-					print_r($row);
-					echo "<br>";
 
-					sqlite_rewind($result);
-					$row = sqlite_fetch_array($result, SQLITE_NUM); 
-					print_r($row);
-					echo "<br>";
 
-					sqlite_rewind($result);
-					$row = sqlite_fetch_array($result, SQLITE_BOTH); 
-					print_r($row);
-					echo "<br>";*/
-				}
-				sqlite_close($dbhandle);
-				
-				$nbRecord = pg_query($connexion,"SELECT * FROM quizz.qcm");  //select all the datas comming from the DB
-				$nbRecord = pg_num_rows($nbRecord);  //nb insertions in the DB
-				$request = pg_query($connexion,"SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM quizz.qcm ORDER BY RANDOM() LIMIT $nbQuestions");
-				$i = 0; 
-				while($data = pg_fetch_array($request)){
-			?>
-			
-			<FORM name="quiz" method="post" action="score1.php" enctype="multipart/form-data">
+					?>
+
+					<FORM name="quiz" method="post" action="score1.php" enctype="multipart/form-data">
 							<h2> <?php 
 								$i++;
 								echo $i.')'.$data['question']; 
@@ -100,9 +79,12 @@
 									 ?>"value="<?php 
 													echo $data['rep_juste'];
 												?> "/>
-			
+
 			<?php
+					}
+
 				}
+				sqlite_close($dbhandle);
 			?>
 			<br>
 							<INPUT name="entrer" type="submit" value="Soumettre" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
