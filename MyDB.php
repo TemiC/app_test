@@ -102,7 +102,7 @@ EOF;
    				 INSERT INTO qcm1 (question, rep1, rep2, rep3, rep_juste, images)VALUES("On peu désormais retrouver son smartphone avec une montre sous Android Wear grâce à qui ?", "A moi", "A Facebook", "A Google","A Google","images/android-wear.jpg");
    				 INSERT INTO qcm1 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Entre autre Facetime et Facebook Messager quel autre logiciels de VoiIP pourra être sur écoute ?", "Skype", "MSN", "SnapChat","Skype","images/sur-ecoute.jpg");
    				 
-   				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce quest BuzzFil ?", "Un site de rencontre pour personne âgés", "Un jeune média indépendant", "Une nouvelle téléréalité","Un jeune média indépendant","images/buzz-fil.png");
+   				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce quest BuzzFil ?", "Un site de rencontre pour personne âgés", "Un jeune média indépendant", "Une nouvelle téléréalité","Un jeune média indépendant","images/buzz-fill.png");
    				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Comment sappelle le fast food consacré entierement à Nutella", "Nutella world", "Nutelleria", "Nutell","Nutelleria","images/nutella.jpg");
    				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("La série Vickings recherche 8000 figurants pour sa prochaine saison ou ce situe t-elle ?", "En Suède", "Au Pays-Bas", "En Irland","En Irland","images/vickings.jpg");
    				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Pixar est une industrie spécialisé dans ... ?", "Dans les composants informatique", "Dans les films danimations", "Dans la construction de robot","Dans les films danimations","images/wall-e.jpg");
