@@ -17,7 +17,7 @@
 					</div>
 					<br><br>
 					<div id="replay">
-					<?php echo '<a href="http://localhost/projectApp/quiz2.php">REPLAY</a>'; ?>
+					<?php echo '<a href="http://hidden-retreat-3686.herokuapp.com/quiz2.php">REPLAY</a>'; ?>
 					</div>
 					<div id="save">
 						SAVE ME 
