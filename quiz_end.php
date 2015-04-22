@@ -27,43 +27,13 @@
 				echo "test2\n";
 				
 				if(isset($session)) {
-					try {	
-						$user_profile = (new FacebookRequest(
-						$session, 'GET', '/me'
-						))->execute()->getGraphObject(GraphUser::className());
-					} 
-					catch(FacebookRequestException $e) {
-					} 
-					echo "certaines info de la page wefound404 peuvent vous intéressez !";
-					$request_event =(new FacebookRequest($session), 'GET', '747936718583560/likes');
-					$response = $request->execute();
-					$graphObject = $response->getGraphObject()->asArray();
-
-					foreach ($graphObject['data'] as $key) {
-						echo "Message de " .$key->from->name."</strong> : ".$key->message. "<br>";
-						echo "Le " .$key->created_time. "<br><br>";
-					}
-				}
 					/*try {	
 						$user_profile = (new FacebookRequest(
 						$session, 'GET', '/me'
 						))->execute()->getGraphObject(GraphUser::className());
-
-						$api = file_get_contents('http://graph.facebook.com/https://www.facebook.com/wefound404?fref=nf'); // On récupère la page de l'API facebook
-						$likes = json_decode($api); // On décode le JSON renvoyé
-						$likes = $likes->likes; // On récupère la valeur de "likes"
-						$likes = (string)$likes; // On en fait une chaîne de caractères
-						echo $likes; // On l'affiche
 					} 
 					catch(FacebookRequestException $e) {
 					} 
-				}
-
-				echo "test3\n";*/
-				/*if($session){
-					$user_profile = (new FacebookRequest(
-					$session, 'GET', '/me'
-					))->execute()->getGraphObject(GraphUser::className());
 					echo "certaines info de la page wefound404 peuvent vous intéressez !";
 					$request_event =(new FacebookRequest($session), 'GET', '747936718583560/likes');
 					$response = $request->execute();
@@ -72,9 +42,8 @@
 					foreach ($graphObject['data'] as $key) {
 						echo "Message de " .$key->from->name."</strong> : ".$key->message. "<br>";
 						echo "Le " .$key->created_time. "<br><br>";
-					}
-				}*/
-
+					}*/
+				}
 			?>
 
 		
