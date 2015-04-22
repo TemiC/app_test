@@ -11,11 +11,7 @@ if($session){
 			$response = $request->execute();
 			$user_profile = $response->getGraphObject("Facebook\GraphUser");
 
-			$request = new FacebookRequest(
-			  $session,
-			  'GET',
-			  '/me'
-			);
+			$request = new FacebookRequest($session,'GET','/me');
 			$response = $request->execute();
 			$graphObject = $response->getGraphObject()->asArray();
 
@@ -39,13 +35,13 @@ if($session){
 					foreach ($graphObject_photos["data"] as $image) {
 						echo "<img width='300px' src='".$image->images[0]->source."'>";
 					}
-					
-				}catch(FacebookRequestException $e)
-				{
-					echo "Erreur ". $e->getMessage();
-					//On supprime la variable de session au cas ou
-					session_destroy();
-				}*/
+					*/
+		}
+		catch(FacebookRequestException $e){
+			echo "Erreur ". $e->getMessage();
+			//On supprime la variable de session au cas ou
+			session_destroy();
+		}
 	else {
 		$url = $helper->getLoginUrl($permission);
 		echo "Veuillez vous connecter en <a href='".$url."'>cliquant ici</a>";
