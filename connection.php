@@ -25,8 +25,8 @@ if($session){
             $email = $user_profile->getProperty('mail');
             $gender = $user_profile->getProperty('gender'); 
 
-            $query = ('INSERT INTO user (id,fname,lname,mail,genre) VALUES ("'.$id.'","'.$fname.'","'.$lname.'","'.$mail.'","'.$gender.'");');
-            $result = $base->exec($query);
+            //$query = ('INSERT INTO user (id,fname,lname,mail,genre) VALUES ("'.$id.'","'.$fname.'","'.$lname.'","'.$mail.'","'.$gender.'");');
+            //$result = $base->exec($query);
 
             $request_photos = new FacebookRequest(
 					  $session,
