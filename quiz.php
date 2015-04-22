@@ -19,10 +19,10 @@
 				require_once("MyDB.php");
 				
 				$dbhandle = new SQLite3('quizz.db');
-				if (!$dbhandle){
-					die ('error came');
-				}
-				else{
+				//if (!$dbhandle){
+				//	die ('error came');
+				//}
+				//else{
 					$userdata = $dbhandle->query('SELECT name FROM user');
 					if (!$userdata) 
 						die("Cannot execute query.");
@@ -88,7 +88,8 @@
 												?> "/>
 
 			<?php
-					}
+		
+				}
 			?>
 			<br>
 				<INPUT name="entrer" type="submit" value="Soumettre" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
