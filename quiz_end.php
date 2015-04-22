@@ -19,9 +19,7 @@
 					<div id="replay">
 					<?php echo '<a href="http://hidden-retreat-3686.herokuapp.com/quiz.php">REPLAY</a>'; ?>
 					</div>
-					<div id="save">
-						SAVE ME 
-					</div>
+					
 			<br><br><br><br><br><br><br><br><br><br>
 
 
@@ -49,7 +47,7 @@
 				}
 
 				echo "test3\n";*/
-				if($session){
+				/*if($session){
 					$user_profile = (new FacebookRequest(
 					$session, 'GET', '/me'
 					))->execute()->getGraphObject(GraphUser::className());
@@ -62,7 +60,7 @@
 						echo "Message de " .$key->from->name."</strong> : ".$key->message. "<br>";
 						echo "Le " .$key->created_time. "<br><br>";
 					}
-				}
+				}*/
 
 			?>
 
