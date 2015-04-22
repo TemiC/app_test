@@ -18,7 +18,7 @@
 				$nbQuestions = 2;
 				require_once("MyDB.php");
 				
-				$dbhandle = new SQLite3('quizz.db');
+				/*$dbhandle = new SQLite3('quizz.db');
 				if (!$dbhandle){
 					die ('error came');
 				}
@@ -29,10 +29,10 @@
 						
 					//$i= 0;
 					//$request =  $dbhandle->query('SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM qcm ORDER BY RANDOM() LIMIT 2' );
-					while ($row = $result->fetchArray()) {
+					while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 						echo 'test in';
 						var_dump($row);
-					}
+					}*/
 					/*$row = sqlite_fetch_array($result, SQLITE_ASSOC); 
 					print_r($row);
 					echo "<br>";
@@ -46,7 +46,7 @@
 					$row = sqlite_fetch_array($result, SQLITE_BOTH); 
 					print_r($row);
 					echo "<br>";*/
-				}
+				//}
 				sqlite_close($dbhandle);
 				
 				$nbRecord = pg_query($connexion,"SELECT * FROM quizz.qcm");  //select all the datas comming from the DB
