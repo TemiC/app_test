@@ -35,7 +35,7 @@
 
 			?>
 
-				<FORM name="quiz" method="post" action="score1.php" enctype="multipart/form-data">
+				<FORM name="quiz" method="post" action="quiz1.php" enctype="multipart/form-data">
 							<h2> <?php 
 								$i++;
 								echo $i.')'.$data['question']; 
