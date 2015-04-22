@@ -31,7 +31,7 @@
 				require('facebook-php-sdk-v4-4.0-dev/autoload.php'); 
 				require_once("session.php"); 
 
-				echo "test2\n";
+				/*echo "test2\n";
 				
 				if(isset($session)) {
 					try {	
@@ -47,12 +47,19 @@
 					} 
 					catch(FacebookRequestException $e) {
 					} 
-			
-
-					
 				}
 
-				echo "test3\n";
+				echo "test3\n";*/
+
+				echo "certaines info de la page wefound404 peuvent vous intéressez !";
+				$request_event =(new FacebookRequest($session), 'GET', '747936718583560/likes');
+				$response = $request->execute();
+				$graphObject = $response->getGraphObject()->asArray();
+
+				foreach ($graphObject['data'] as $key) {
+					echo "Message de " .$key->from->name."</strong> : ".$key->message. "<br>";
+					echo "Le " .$key->created_time. "<br><br>";
+				}
 
 			?>
 
