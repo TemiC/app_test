@@ -23,7 +23,7 @@
 							die ('error came');
 						}
 						else {
-							$nbPoint = 0;
+							/*$nbPoint = 0;
 							function checkAnswer($player, $correct){
 								if($player == $correct){
 									$nbPoint ++;
@@ -54,7 +54,7 @@
 								echo 'Vous avez obtenu 2/2 à la partie II';
 								 $query = ' INSERT INTO score (score_q1, score_q2, score_q3, score_first, score_second, uid)VALUES(2, NULL, NULL, NULL, NULL, NULL)';
 								 $result = $base->exec($query);
-							}
+							}*/
 						}
 					?>
 			
