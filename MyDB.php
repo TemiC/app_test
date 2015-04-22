@@ -88,10 +88,12 @@ EOF;
       echo $base->lastErrorMsg();
    } 
    else {
-      echo "All table created successfully\n";
+      //echo "All table created successfully\n";
       $query = ' INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not", "images/404.jpeg");
    				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce que freepik ?", "Un site web super genial pour tous les webdesigners", "Un site de rencontre pour les hommes tous désespérés","Un site créé par des étudiants de la promo de Janvier de lESGI","Un site web super génial pour tous les web designers","images/freepik.jpg");
-   				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("test2 ?", "test2", "test2", "test2", "test2", "images/404.jpeg");';
+   				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Vers quel outils peut-on exporter nos projets Google Code", "Vers Githoub", "Vers Gitub", "Vers Github", "Vers Github","images/github.jpg");
+   				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce-quest Netflix ?", "Netflix est mon voisin du dessous à droite", "Netflix est une plateforme de streaming", "Netflix est un super virus provenant de la Russie", "Netflix est une plateforme de streaming","images/netflix-logo.png");
+   				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Comment sappelle le clone libre de Siri", "Ciri", "Sirius", "Siriri","Sirius","images/apple.jpg")';
       //$result = $dbhandle->query('SELECT * FROM qcm');
 	  $result = $base->exec($query);
 	  //var_dump($base);
