@@ -23,12 +23,7 @@
 					die ('error came');
 				}
 				else{
-					$userdata = $dbhandle->query('SELECT name FROM user');
-					if (!$userdata) 
-						die("Cannot execute query.");
-
-					echo "vous êtes: $userdata";
-
+					
 					$result = $dbhandle->query('SELECT * FROM qcm');
 					if (!$result) 
 						die("Cannot execute query.");
