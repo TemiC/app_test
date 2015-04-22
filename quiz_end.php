@@ -21,10 +21,7 @@
 
 
 			<?php
-				echo "test1\n";
-				require_once("session.php"); 
-
-				echo "test2\n";
+				require_once("session.php");
 				
 				if(isset($session)) {
 					/*try {	
