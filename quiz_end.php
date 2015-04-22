@@ -17,12 +17,26 @@
 					</div>
 					<br><br>
 					<div id="replay">
-					<?php echo '<a href="http://hidden-retreat-3686.herokuapp.com/quiz2.php">REPLAY</a>'; ?>
+					<?php echo '<a href="http://hidden-retreat-3686.herokuapp.com/quiz.php">REPLAY</a>'; ?>
 					</div>
 					<div id="save">
 						SAVE ME 
 					</div>
 			<br><br><br><br><br><br><br><br><br><br>
+
+
+
+			<?php 
+				function getCountLikeFacebook($page){
+					$page = "https://www.facebook.com/wefound404?fref=nf";
+				    $url = "https://api.facebook.com/method/links.getStats?urls=".urlencode($page)."&format=json";
+				    $data = json_decode(file_get_contents($url));
+				 
+				    if(!isset($data[0]->like_count)){ return 'erreur'; }
+				 
+				    return $data[0]->like_count;
+				}
+			?>
 			<script>
 			  window.fbAsyncInit = function() {
 				FB.init({
@@ -41,12 +55,18 @@
 			   }(document, 'script', 'facebook-jssdk'));
 			</script>
 
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="450"
+			  data-show-faces="true">
+			</div>
+
+
+		 // recupération des commentaires d'un article 
+
+
+
 
 		</div>
 			</body>
