@@ -24,7 +24,7 @@
 				require_once("session.php");
 				
 				if(isset($session)) {
-					/*try {	
+					try {	
 						$user_profile = (new FacebookRequest(
 						$session, 'GET', '/me'
 						))->execute()->getGraphObject(GraphUser::className());
@@ -32,14 +32,14 @@
 					catch(FacebookRequestException $e) {
 					} 
 					echo "certaines info de la page wefound404 peuvent vous intéressez !";
-					$request_event =(new FacebookRequest($session), 'GET', '747936718583560/likes');
+					$request_event =(new FacebookRequest($session), 'GET', '747936718583560/comments');
 					$response = $request->execute();
 					$graphObject = $response->getGraphObject()->asArray();
 
 					foreach ($graphObject['data'] as $key) {
 						echo "Message de " .$key->from->name."</strong> : ".$key->message. "<br>";
 						echo "Le " .$key->created_time. "<br><br>";
-					}*/
+					}
 				}
 			?>
 
