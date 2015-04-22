@@ -46,7 +46,7 @@ else{
 		rep3 char(100) NOT NULL,
 		rep_juste char(100) NOT NULL,
 		images character(60) NOT NULL,
-		id autoincrement PRIMARY KEY NOT NULL
+		id INTEGER PRIMARY KEY AUTOINCREMENT
 		);
 		
 	   CREATE TABLE qcm2( 
@@ -56,7 +56,7 @@ else{
 		rep3 char(100) NOT NULL,
 		rep_juste char(100) NOT NULL,
 		images character(60) NOT NULL,
-		id autoincrement PRIMARY KEY NOT NULL
+		id INTEGER PRIMARY KEY AUTOINCREMENT
 		);
 		
 	  CREATE TABLE qcm3( 
@@ -66,16 +66,16 @@ else{
 		rep3 char(100) NOT NULL,
 		rep_juste char(100) NOT NULL,
 		images character(60) NOT NULL,
-		id autoincrement PRIMARY KEY NOT NULL
+		id INTEGER PRIMARY KEY AUTOINCREMENT
 		);
 		
 	  CREATE TABLE score( 
-		uid integer PRIMARY KEY NOT NULL,
 		score_q1 integer,
 		score_q2 integer,
 		score_q3 integer,
 		score_first integer,
 		score_second integer,
+		uid INTEGER PRIMARY KEY AUTOINCREMENT
 		);
 		
 		
