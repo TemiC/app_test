@@ -23,27 +23,14 @@
             $email = $user_profile->getProperty('mail');
             $gender = $user_profile->getProperty('gender'); 
 
-            $query = ('INSERT INTO user (id,fname,lname,mail,genre) VALUES ("'.$id.'","'.$fname.'","'.$lname.'","'.$mail.'","'.$gender.'");');
-            $result = $base->exec($query);
-
-            $request_photos = new FacebookRequest(
-					  $session,
-					  'GET',
-					  '/me/photos/uploaded'
-					);
-					$response_photos = $request_photos->execute();
-					$graphObject_photos = $response_photos->getGraphObject()->asArray();
-
-					foreach ($graphObject_photos["data"] as $image) {
-						echo "<img width='300px' src='".$image->images[0]->source."'>";
-					}
-					
-				}catch(FacebookRequestException $e)
-				{
-					echo "Erreur ". $e->getMessage();
-					//On supprime la variable de session au cas ou
-					session_destroy();
-				}
+            
+		}
+		catch(FacebookRequestException $e){
+			echo "Erreur ". $e->getMessage();
+			//On supprime la variable de session au cas ou
+			session_destroy();
+		}
+		
 	else {
 		$url = $helper->getLoginUrl(['email','user_photos']);
 		echo "Veuillez vous connecter en <a href='".$url."'>cliquant ici</a>";
