@@ -13,7 +13,7 @@
 				<h1> THE END </h1>
 					<br><br>
 					<div id="replay">
-					<?php echo '<a href="http://hidden-retreat-3686.herokuapp.com/quiz.php">REPLAY</a>'; ?>
+					<?php echo '<a href="http://hidden-retreat-3686.herokuapp.com/quiz.php"><img src"images/replay.jpg"></a>'; ?>
 					</div>
 					
 			<br><br><br><br><br><br><br><br><br><br>
