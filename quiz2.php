@@ -23,7 +23,7 @@
 					die ('error came');
 				}
 				else{
-					$result = $dbhandle->query('SELECT * FROM qcm');
+					$result = $dbhandle->query('SELECT * FROM qcm2');
 					if (!$result) 
 						die("Cannot execute query.");
 						

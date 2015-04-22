@@ -103,11 +103,18 @@ EOF;
    				 INSERT INTO qcm1 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Entre autre Facetime et Facebook Messager quel autre logiciels de VoiIP pourra être sur écoute ?", "Skype", "MSN", "SnapChat","Skype","images/sur-ecoute.jpg");
    				 
    				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce quest BuzzFil ?", "Un site de rencontre pour personne âgés", "Un jeune média indépendant", "Une nouvelle téléréalité","Un jeune média indépendant","images/buzz-fil.png");
-   				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Comment sappelle le fast food consacré entierement à Nutella", "Nutella world", "Nutelleria", "Nutell","Nutelleria","images/nutella");
+   				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Comment sappelle le fast food consacré entierement à Nutella", "Nutella world", "Nutelleria", "Nutell","Nutelleria","images/nutella.jpg");
    				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("La série Vickings recherche 8000 figurants pour sa prochaine saison ou ce situe t-elle ?", "En Suède", "Au Pays-Bas", "En Irland","En Irland","images/vickings.jpg");
    				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Pixar est une industrie spécialisé dans ... ?", "Dans les composants informatique", "Dans les films danimations", "Dans la construction de robot","Dans les films danimations","images/wall-e.jpg");
    				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("ai2html est un script pour Adobe Illustrator qui permet de convertir un fichier Adobe Illustrator en ... ?", "Un fichier java", "Un fichier html", "Un fichier binaire","Un fichier html","images/illustrator.jpg");
-   				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Qui travail sur l élaboration drone camera ?", "Une grande entreprise de la Sillicone Vallée", "Une petite startup à Bordeaux", "Google","Une petite startup à Bordeaux","images/drone.jpg");';
+   				 INSERT INTO qcm2 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Qui travail sur l élaboration drone camera ?", "Une grande entreprise de la Sillicone Vallée", "Une petite startup à Bordeaux", "Google","Une petite startup à Bordeaux","images/drone.jpg");
+
+   				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce quest ai2html ?", "Un IDE consacré html", "Un script pour Adobe Illustrator", "Un script pour Photoshop","Un script pour Adobe Illustrator","images/illustrator.jpg");
+   				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("GetStrike est à la fois un moteur de recherche et ... ?", "Une API pour chercher des torrents à la vitesse de la lumière", "Un réseau social pour se faire des amis", "Un resto pas cher","Une API pour chercher des torrents à la vitesse de la lumière","images/getStrike.jpg");
+   				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("La première course connectée est un soutien vers quel organisme ?", "Les restos du coeur", "UNICEF", "La croix rouge","UNICEF","images/course.jpg");
+   				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("La série Vickings recherches combien de nouveau figurants ?", "800", "8000", "80","8000","images/Vickings.jpg");
+   				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("PHP 7.x sera la prochaine version de PHP, quelle était la précedente ?", "PHP 6.x", "PHP 4.x", "PHP 5.x","PHP 5.x","images/php.jpg");
+   				 INSERT INTO qcm3 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel futur réseau socia sera bientôt constitué de publicité ?", "Facebook", "Instagram", "Twitter","Instagram","images/reseau-sociaux.jpg");';
       //$result = $dbhandle->query('SELECT * FROM qcm');
 	  $result = $base->exec($query);
 	  //var_dump($base);

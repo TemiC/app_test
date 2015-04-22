@@ -16,16 +16,26 @@
 			<?php 
 				
 				$nbQuestions = 2;
-				require_once("connection_bdd.php");
+				require_once("MyDB.php");
 				
-				$nbRecord = pg_query($connexion,"SELECT * FROM quizz.qcm3");  //select all the datas comming from the DB
-				$nbRecord = pg_num_rows($nbRecord);  //nb insertions in the DB
-				$request = pg_query($connexion,"SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM quizz.qcm3 ORDER BY RANDOM() LIMIT $nbQuestions");
-				$i = 0; 
-				while($data = pg_fetch_array($request)){
+				$dbhandle = new SQLite3('quizz.db');
+				if (!$dbhandle){
+					die ('error came');
+				}
+				else{
+					$result = $dbhandle->query('SELECT * FROM qcm3');
+					if (!$result) 
+						die("Cannot execute query.");
+						
+					$i= 0;
+					$request =  $dbhandle->query('SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM qcm ORDER BY RANDOM() LIMIT 2' );
+					while ($data = $request->fetchArray(SQLITE3_ASSOC)) {
+						//var_dump($row);
+
+
 			?>
-			
-			<FORM name="quiz" method="post" action="quiz_correction.php" enctype="multipart/form-data">
+
+				<FORM name="quiz" method="post" action="quiz_end.php" enctype="multipart/form-data">
 							<h2> <?php 
 								$i++;
 								echo $i.')'.$data['question']; 
@@ -34,7 +44,7 @@
 							<center>
 							<IMG src="<?php 
 										echo $data['images'] 
-									  ?>" width="100" height="70" alt="first image" title="couleur" vspace="5" hspace="5">
+									  ?>" width="70" height="70" alt="first image" title="couleur" vspace="5" hspace="5">
 							</center>
 							<br>
 							<input type="radio"name="<?php 
@@ -69,17 +79,18 @@
 									 ?>"value="<?php 
 													echo $data['rep_juste'];
 												?> "/>
-			
+
 			<?php
-				}
+					}
 			?>
 			<br>
-							<INPUT name="entrer" type="submit" value="Soumettre" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
-							<INPUT name="Annuler" type="reset" value="Annuler" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
+				<INPUT name="entrer" type="submit" value="Soumettre" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
+				<INPUT name="Annuler" type="reset" value="Annuler" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
 		</FORM>
+		<?php
+			}
+			sqlite_close($dbhandle);
+		?>
 		</div>
 	</body>
 </html>
-
-
-
