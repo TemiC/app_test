@@ -13,7 +13,7 @@
 				<h1> THE END </h1>
 					<br><br>
 					<div>
-					<a href="http://hidden-retreat-3686.herokuapp.com/quiz.php"><img src"images/replay.jpg"></a>
+					<img src="images/replay.jpg" width="430" height="250" alt="quiz" title="quiz" vspace="5" hspace="5"/>
 					</div>
 					
 			<br><br><br><br><br><br><br><br><br><br>
