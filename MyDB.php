@@ -93,9 +93,9 @@ EOF;
    $query = 'INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel était le mot remplacé par WE ?", "Nut", "Not", "Nit", "Not ,"images/404.jpeg")';
 			
    $base->exec($query);
-   echo 'test in';
-   var_dump($base);
-   echo 'test out';
+   echo 'test in ';
+   var_dump($query);
+   echo ' test out';
 
    
    $base->close();
