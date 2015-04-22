@@ -93,18 +93,18 @@ EOF;
    				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce que freepik ?", "Un site web super genial pour tous les webdesigners", "Un site de rencontre pour les hommes tous désespérés","Un site créé par des étudiants de la promo de Janvier de lESGI","Un site web super génial pour tous les web designers","images/freepik.jpg");
    				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Vers quel outils peut-on exporter nos projets Google Code", "Vers Githoub", "Vers Gitub", "Vers Github", "Vers Github","images/github.jpg");
    				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quest-ce-quest Netflix ?", "Netflix est mon voisin du dessous à droite", "Netflix est une plateforme de streaming", "Netflix est un super virus provenant de la Russie", "Netflix est une plateforme de streaming","images/netflix-logo.png");
-   				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Comment sappelle le clone libre de Siri", "Ciri", "Sirius", "Siriri","Sirius","images/apple.jpg")';
+   				 INSERT INTO qcm (question, rep1, rep2, rep3, rep_juste, images)VALUES("Comment sappelle le clone libre de Siri ?", "Ciri", "Sirius", "Siriri","Sirius","images/apple.jpg");
+
+   				 INSERT INTO qcm1 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel grand studio nous offre la possibilité de créer son propre film ?", "Pixar", "DreamWorks", "Walt Disney","Pixar","images/wall-e.jpg");
+   				 INSERT INTO qcm1 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Comment sappelle le calligraphe anglais qui redessine les logos célèbres avec sa plume ?", "Bastian Colt", "Bastian Lester", "Kevin Lester","Bastien Lester","images/calligraphie.jpg");
+   				 INSERT INTO qcm1 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel sera la nouvelle version de PHP", "PHP 12", "PHP 6", "PHP 7","PHP 7","images/php.jpg");
+   				 INSERT INTO qcm1 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Quel sera le nouvel OS de Microsoft ?", "Microsoft 20", "Microsoft 9", "Microsoft 10","Microsoft 10","images/microsoft.png");
+   				 INSERT INTO qcm1 (question, rep1, rep2, rep3, rep_juste, images)VALUES("On peu désormais retrouver son smartphone avec une montre sous Android Wear grâce à qui ?", "A moi", "A Facebook", "A Google","A Google","images/android-wear.jpg");
+   				 INSERT INTO qcm1 (question, rep1, rep2, rep3, rep_juste, images)VALUES("Entre autre Facetime et Facebook Messager quel autre logiciels de VoiIP pourra être sur écoute ?", "Skype", "MSN", "SnapChat","Skype","images/sur-ecoute.jpg");';
       //$result = $dbhandle->query('SELECT * FROM qcm');
 	  $result = $base->exec($query);
 	  //var_dump($base);
    }
-   
-  //$query = 'SELECT * FROM qcm';
- 
-
-
- 
-
    
    $base->close();
 	
