@@ -27,11 +27,11 @@
 					if (!$result) 
 						die("Cannot execute query.");
 						
-					$i= 0;
+					//$i= 0;
 					//$request =  $dbhandle->query('SELECT id, question, rep1, rep2, rep3, rep_juste, images FROM qcm ORDER BY RANDOM() LIMIT 2' );
-					while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-						var_dump($row);
-					}
+					//while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+						var_dump($result);
+					//}
 					/*$row = sqlite_fetch_array($result, SQLITE_ASSOC); 
 					print_r($row);
 					echo "<br>";
