@@ -98,6 +98,7 @@ EOF;
 		var_dump($row);
 	  }
 	  var_dump($base);
+	  echo "test out \n";
    }
    
   //$query = 'SELECT * FROM qcm';
