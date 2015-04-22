@@ -22,14 +22,8 @@
 				if (!$dbhandle){
 					die ('error came');
 				}
-				//else{
-				//	$userdata = $dbhandle->query('SELECT name FROM user');
-				//	if (!$userdata) 
-				//		die("Cannot execute query.");
-				//	var_dump($userdata);
-
-					//echo "vous êtes: $userdata";
-
+				else{
+					
 					$result = $dbhandle->query('SELECT * FROM qcm');
 					if (!$result) 
 						die("Cannot execute query.");
@@ -88,7 +82,7 @@
 												?> "/>
 
 			<?php
-				}
+					}
 			?>
 			<br>
 				<INPUT name="entrer" type="submit" value="Soumettre" style="background: #E7A200; font-family: Verdana; color: #000000; font-weight: 600; font-size: 9pt;">
