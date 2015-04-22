@@ -27,30 +27,32 @@
 
 
 			<?php
-				echo "test1";
+				echo "test1\n";
 				require('facebook-php-sdk-v4-4.0-dev/autoload.php'); 
 				require_once("session.php"); 
 
-				echo "test2";
+				echo "test2\n";
 				
 				if(isset($session)) {
 					try {	
 						$user_profile = (new FacebookRequest(
 						$session, 'GET', '/me'
 						))->execute()->getGraphObject(GraphUser::className());
+
+						$api = file_get_contents('http://graph.facebook.com/https://www.facebook.com/wefound404?fref=nf'); // On récupère la page de l'API facebook
+						$likes = json_decode($api); // On décode le JSON renvoyé
+						$likes = $likes->likes; // On récupère la valeur de "likes"
+						$likes = (string)$likes; // On en fait une chaîne de caractères
+						echo $likes; // On l'affiche
 					} 
 					catch(FacebookRequestException $e) {
 					} 
 			
 
-					$api = file_get_contents('http://graph.facebook.com/https://www.facebook.com/wefound404?fref=nf'); // On récupère la page de l'API facebook
-					$likes = json_decode($api); // On décode le JSON renvoyé
-					$likes = $likes->likes; // On récupère la valeur de "likes"
-					$likes = (string)$likes; // On en fait une chaîne de caractères
-					echo $likes; // On l'affiche
+					
 				}
 
-				echo "test3";
+				echo "test3\n";
 
 			?>
 
