@@ -35,13 +35,17 @@
 		if (!$query) 
 			die("Cannot execute query.");
 		while ($row = $query->fetchArray()) {
-			var_dump($row);
+			if(empty($query)){
+			$query = 'INSERT INTO user( name, mail, genre, id_fb) VALUES("$name","$mail", "$genre","$id_fb")';
+			$dbhandle->exec($query);
+			var_dump($dbhandle);
+			}
+			else{
+				$query = 'UPDATE user SET name ="$name", mail = "$mail", genre = "$genre", WHERE id_fb = "$id_fb"';
+				$dbhandle->exec($query);
+			}
 		}
-		//if(empty($query)){
-			//$query = 'INSERT INTO user( name, mail, genre, id_fb) VALUES("$name","$mail", "$genre","$id_fb")';
-			//$dbhandle->exec($query);
-			//var_dump($dbhandle);
-		//}
+		
 	}
 		//$query = 'SELECT * FROM user WHERE id_fb ='$id_fb'';
 	/*	$query = $dbhandle->query('SELECT * FROM user WHERE id_fb ='$id_fb'')
