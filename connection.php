@@ -36,9 +36,9 @@ if(isset($session)) {
 			die("Cannot execute this query.");
 		while ($row = $query->fetchArray()) {
 			if(empty($query)){
-			$query = 'INSERT INTO user( name, mail, genre, id_fb) VALUES(".$name.",".$mail.", ".$genre.",".$id_fb.")';
-			$dbhandle->exec($query);
-			var_dump($dbhandle);
+				$query = 'INSERT INTO user(name, mail, genre, id_fb) VALUES('".$name."','".$mail."', '".$genre."','".$id_fb."')';
+				$dbhandle->exec($query);
+				var_dump($dbhandle);
 			}
 			else{
 				$query = 'UPDATE user SET name ="$name", mail = "$mail", genre = "$genre", WHERE id_fb = "$id_fb"';
