@@ -27,14 +27,19 @@
 
 
 			<?php 
+
+			 // recupération des commentaires d'un article 
 				function getCountLikeFacebook($page){
 					$page = "https://www.facebook.com/wefound404?fref=nf";
 				    $url = "https://api.facebook.com/method/links.getStats?urls=".urlencode($page)."&format=json";
 				    $data = json_decode(file_get_contents($url));
 				 
-				    if(!isset($data[0]->like_count)){ return 'erreur'; }
+				    if(!isset($data[0]->like_count)){
+				    	return 'erreur';
+				    }
 				 
 				    return $data[0]->like_count;
+				    echo "$data";
 				}
 			?>
 			<script>
@@ -63,7 +68,7 @@
 			</div>
 
 
-		 // recupération des commentaires d'un article 
+		
 
 
 
