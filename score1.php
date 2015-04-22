@@ -23,14 +23,14 @@
 							die ('error came');
 						}
 						else {
-							/*$nbPoint = 0;
+							$nbPoint = 0;
 							function checkAnswer($player, $correct){
 								if($player == $correct){
 									$nbPoint ++;
 								}
 							}
 							
-							for ($j=1; $j<= 2; $j++){
+							/*for ($j=1; $j<= 2; $j++){
 								if (isset($_POST['reponse'.$j]))
 									${"reponse"."$j"} = $_POST['reponse'.$j];
 							}
