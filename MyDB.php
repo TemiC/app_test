@@ -32,7 +32,7 @@ else{
 		);
 		
 	  CREATE TABLE user( 
-		name char(5O) NOT NULL,
+		name char(100) NOT NULL,
 		mail char(100) NOT NULL,
 		genre char(25) NOT NULL,
 		id_fb char(100) NOT NULL,
