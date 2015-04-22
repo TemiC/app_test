@@ -13,7 +13,7 @@
 				<h1> THE END </h1>
 					<br><br>
 					<div>
-					<img src="images/replay.jpg" width="430" height="250" alt="quiz" title="quiz" vspace="5" hspace="5"/>
+					<img src="images/replay.jpg" width="100" height="100" alt="quiz" title="quiz" vspace="5" hspace="5"/>
 					</div>
 					
 			<br><br><br><br><br><br><br><br><br><br>
