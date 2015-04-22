@@ -91,16 +91,17 @@ EOF;
    } 
    else {
       echo "All table created successfully\n";
+      $result = $dbhandle->query('SELECT * FROM qcm');
+	  //$result = $base->exec($query);
+	  while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+		echo 'test in';
+		var_dump($row);
+	  }
+	  var_dump($base);
    }
    
   //$query = 'SELECT * FROM qcm';
-  $result = $dbhandle->query('SELECT * FROM qcm');
-  //$result = $base->exec($query);
-  while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-	echo 'test in';
-	var_dump($row);
-  }
-  var_dump($base);
+ 
 
 
  
