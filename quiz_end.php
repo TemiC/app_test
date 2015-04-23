@@ -22,9 +22,30 @@
 
 			<?php
 				require_once("session.php");
+				require_once("connection.php");
+				require_once("MyDB.php");
 				
 				if(isset($session)) {
-					try {	
+					$dbhandle = new SQLite3('quizz.db');
+					if (!$dbhandle){
+						die ('error came');
+					}
+					$query = $dbhandle->query('SELECT id_fb FROM user');
+					if (!$query) 
+						die("Cannot execute this query.");
+					$request = new FacebookRequest(
+					$session,
+					  'GET',
+					  '/{.$query.}/picture'
+					);
+					$response = $request->execute();
+					$graphObject = $response->getGraphObject();
+
+					sqlite_close($dbhandle);
+				}
+
+
+					/*try {	
 						$user_profile = (new FacebookRequest(
 						$session, 'GET', '/me'
 						))->execute()->getGraphObject(GraphUser::className());
@@ -40,7 +61,7 @@
 						echo "Message de " .$key->from->name."</strong> : ".$key->message. "<br>";
 						echo "Le " .$key->created_time. "<br><br>";
 					}
-				}
+				}*/
 			?>
 
 		

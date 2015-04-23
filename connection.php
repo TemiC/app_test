@@ -45,7 +45,7 @@ if(isset($session)) {
 				$dbhandle->exec($query);
 			}
 		}
-		
+		sqlite_close($dbhandle);
 	}
 	}
 	else {
