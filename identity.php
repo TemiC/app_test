@@ -41,7 +41,7 @@
           <tbody>
           <tr>
                 <td>Prénom</td>
-                <td><?php echo $_SESSION['name'] ?></td>
+                <td><?php echo $_SESSION['fname'] ?></td>
             </tr>
             <tr>
                 <td>ID</td>
