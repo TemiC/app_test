@@ -1,3 +1,13 @@
+<?php
+
+	session_start();
+	// Afficher les erreurs à l'écran
+	ini_set('display_errors', 1);
+	// Afficher les erreurs et les avertissements
+	error_reporting(e_all);
+?>
+
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 	<head>
