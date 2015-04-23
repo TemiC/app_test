@@ -41,16 +41,16 @@
           <tbody>
             <tr>
                 <td>ID</td>
-                <td><?php echo print_r($user_profile->getProperty('id'));?></td>
+                <td><?php echo $user_profile->getProperty('id');?></td>
             </tr>
             <tr>
                 <td>Prénom</td>
-                <td><?php echo $$user_profile->getProperty('fname');?></td>
+                <td><?php echo $user_profile->getProperty('fname');?></td>
             </tr>
             <tr>
                 <td>Nom</td>
                 <td>
-                  <?php echo $$user_profile->getProperty('lname'); ?>
+                  <?php echo $user_profile->getProperty('lname'); ?>
                 </td>
             </tr>   
             <tr>
