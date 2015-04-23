@@ -68,12 +68,7 @@
                   <?php echo $_SESSION['email']; ?>
                 </td>
             </tr>    
-            <tr>
-                <td>Genre</td>
-                <td>
-                  <?php echo $_SESSION['genre']; ?>
-                </td>
-            </tr>    
+              
             <tr>
                 <td>Photo de profil</td>
                 <td>
