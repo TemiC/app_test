@@ -67,26 +67,7 @@
           </tbody>
         </table>
       </div>        
-    <?php endif ?>
- 
-    <div style="margin-top:20px;">
-      <?php if ($user): ?>
-        <!-- Bouton de déconnexion de l'application ET facebook -->
-        <!-- 
-        Pour éviter des problèmes liés à la sécurité des iframes, 
-        n'oubliez pas l'attribut target="_top" 
-        sur les liens de redirection. 
-        -->
-        <a target="_top" href="<?php echo $logoutUrl; ?>">Déconnexion</a>
-      <?php else: ?>
-        <!-- Bouton de connexion à l'application -->
-        <!-- 
-        Pour éviter des problèmes liés à la sécurité des iframes, 
-        n'oubliez pas l'attribut target="_top" 
-        sur les liens de redirection.
-        -->
-        <a target="_top" href="<?php echo $loginUrl; ?>">Connexion</a>
-      <?php endif ?>
+    
     </div>
  
   </body>
