@@ -25,7 +25,7 @@
 		$_SESSION["session"] = $session;
 	} 
 	catch( FacebookRequestException $ex ) { // When Facebook returns an error
-		exit("error in session 1");
+		exit("error in session 1".$ex);
 	}
 	catch( \Exception $ex ) { // When validation fails or other local issues
 		exit("error in session 2");
