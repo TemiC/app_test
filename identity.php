@@ -98,7 +98,7 @@
                     data-width="450"
                     data-show-faces="true">
                   </div>
-                  <div class="fb-comments" data-href="http://hidden-retreat-3686.herokuapp.com/identity.php" "data-numpost=3 data-colorschema="light"> </div>
+                  <div class="fb-comments" data-href="http://hidden-retreat-3686.herokuapp.com/identity.php" data-numpost=3 data-colorschema="light"> </div>
                 </td>
             </tr>  
           </tbody>
