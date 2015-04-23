@@ -5,11 +5,10 @@
 require("session.php"); 
 
 if(isset($session)) {
-			echo "test1";
-		try {	
+			/*echo "test1";
 			$user_profile = (new FacebookRequest(
 			$session, 'GET', '/me'
-			))->execute()->getGraphObject(GraphUser::className());
+			))->execute()->getGraphObject(GraphUser::className());*/
 
 
 		echo "test3";
@@ -32,10 +31,7 @@ if(isset($session)) {
 		$_SESSION['mail'] = $mail;
 		$_SESSION['genre'] = $genre;
 		$_SESSION['id_fb'] = $id_fb;
-		} 
-		catch(FacebookRequestException $e) {
-			exit("error in session 3");
-		} 
+	
 		
 }
 
