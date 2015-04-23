@@ -35,7 +35,7 @@
     ?>
       <div>
         <!-- On affiche les informations de l'utilisateur -->                
-        <h1>Vos informations publiques</h1>    
+        <h1>Merci d'avoir participé à notre QUIZs</h1>    
         <table>
           <thead>
             <tr>
