@@ -72,7 +72,7 @@
             <tr>
                 <td>Photo de profil</td>
                 <td>
-                  <img src="//graph.facebook.com/<?php echo $_SESSION['id_fb'] ?>/picture?type=large" />
+                  <img src="//graph.facebook.com/<?php echo $_SESSION['id_fb']; ?>/picture?type=large" />
                 </td>
             </tr>  
             <tr>
