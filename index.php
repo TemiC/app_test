@@ -15,6 +15,12 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		</head>
 			<body>
+			<script>
+			FB.ui({
+			  method: 'pagetab',
+			  redirect_uri: 'https://hidden-retreat-3686.herokuapp.com/'
+			}, function(response){});
+			</script>
 			<div id="container">
 				<div id="parent">
 					<img src= "images/404.jpeg" width="100" height="100" alt="quiz" title="logo" vspace="5" hspace="5"/>
@@ -47,7 +53,7 @@
 					  data-show-faces="true">
 					</div>
 
-				    
+
 					<div>	
 						<?php require_once("connection.php"); ?> 
 					</div>
