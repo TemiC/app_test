@@ -19,15 +19,10 @@
         try {
        // $user_picture = $facebook->api('/me');
         // La photo de profil
-       // $user_picture = $facebook->api('/me/picture'); 
+       $user_picture = $facebook->api('/me/picture'); 
         // La photo de couverture
-        //$user_cover = $facebook->api('/me?fields=cover');  
-        $name = $user_profile->getProperty('name');
-        $mail = $user_profile->getProperty('email');
-        $genre = $user_profile->getProperty('gender');
-        $id_fb = $user_profile->getProperty('id');
+      $user_cover = $facebook->api('/me?fields=cover');  
 
-        echo "name :"; print_r($name);
       } 
       catch (FacebookApiException $e) {
         error_log($e);
@@ -46,16 +41,16 @@
           <tbody>
             <tr>
                 <td>ID</td>
-                <td><?php echo $user_profile['id']; ?></td>
+                <td><?php echo $user_profile->getProperty('id');?></td>
             </tr>
             <tr>
                 <td>Prénom</td>
-                <td><?php echo $user_profile['first_name']; ?></td>
+                <td><?php echo $$user_profile->getProperty('fname');?></td>
             </tr>
             <tr>
                 <td>Nom</td>
                 <td>
-                  <?php echo $user_profile['last_name']; ?>
+                  <?php echo $$user_profile->getProperty('lname'); ?>
                 </td>
             </tr>   
             <tr>
