@@ -16,7 +16,7 @@
       <?php
 
       require_once("connection.php");
-        try {
+      /*  try {
        // $user_picture = $facebook->api('/me');
         // La photo de profil
        $user_picture = $facebook->api('/me/picture'); 
@@ -26,7 +26,7 @@
       } 
       catch (FacebookApiException $e) {
         error_log($e);
-      }
+      }*/
     ?>
       <div>
         <!-- On affiche les informations de l'utilisateur -->                
