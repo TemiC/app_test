@@ -1,22 +1,3 @@
-<?php
-
-  require_once("connection.php");
-
-  if ($user) {
-    try {
-    $user_profile = $facebook->api('/me'); 
-    // La photo de profil
-    $user_picture = $facebook->api('/me/picture'); 
-    // La photo de couverture
-    $user_cover = $facebook->api('/me?fields=cover');  
-  } 
-  catch (FacebookApiException $e) {
-    error_log($e);
-    $user = null;
-  }
-}
-
-?>
  
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
@@ -32,9 +13,24 @@
         <img src= "images/404.jpeg" width="100" height="100" alt="quiz" title="logo" vspace="5" hspace="5"/>
       </div>
       <h1> QUIZ WE FOUND 404 FAN </h1>
-      
- 
-    <?php if ($user): ?>
+      <?php
+
+      require_once("connection.php");
+
+      if ($user) {
+        try {
+        $user_profile = $facebook->api('/me'); 
+        // La photo de profil
+        $user_picture = $facebook->api('/me/picture'); 
+        // La photo de couverture
+        $user_cover = $facebook->api('/me?fields=cover');  
+      } 
+      catch (FacebookApiException $e) {
+        error_log($e);
+        $user = null;
+      }
+    }
+    ?>
       <div>
         <!-- On affiche les informations de l'utilisateur -->                
         <h1>Vos informations publiques</h1>    
