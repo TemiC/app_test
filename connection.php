@@ -19,7 +19,7 @@ if(isset($session)) {
 		//exit(0);
 		$name = $user_profile->getfirstName();
 		$mail = $user_profile->getProperty('email');
-		$genre = $user_profile->getProperty('gendre');
+		$genre = $user_profile->getProperty('genre');
 		$id_fb = $user_profile->getProperty('id');
 		
 		$_SESSION['fname'] = $fname;
