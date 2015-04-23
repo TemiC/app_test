@@ -21,7 +21,7 @@
         // La photo de profil
        // $user_picture = $facebook->api('/me/picture'); 
         // La photo de couverture
-        $user_cover = $facebook->api('/me?fields=cover');  
+        //$user_cover = $facebook->api('/me?fields=cover');  
         $name = $user_profile->getProperty('name');
         $mail = $user_profile->getProperty('email');
         $genre = $user_profile->getProperty('gender');
@@ -31,7 +31,6 @@
       } 
       catch (FacebookApiException $e) {
         error_log($e);
-        $user = null;
       }
     ?>
       <div>
