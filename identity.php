@@ -41,19 +41,31 @@
           <tbody>
           <tr>
                 <td>Prénom</td>
-                <td><?php echo $_SESSION['fname'] ?></td>
+                <td><?php echo $_SESSION['fname']; ?></td>
             </tr>
             <tr>
                 <td>ID</td>
-                <td><?php echo $user_profile->getProperty('id');?></td>
+                <td><?php echo $_SESSION['id_fb'];?></td>
             </tr>
             
             <tr>
                 <td>Nom</td>
                 <td>
-                  <?php echo $user_profile->getProperty('lname'); ?>
+                  <?php echo $_SESSION['lname']; ?>
                 </td>
-            </tr>   
+            </tr> 
+            <tr>
+                <td>Email</td>
+                <td>
+                  <?php echo $_SESSION['mail']; ?>
+                </td>
+            </tr>    
+            <tr>
+                <td>Genre</td>
+                <td>
+                  <?php echo $_SESSION['genre']; ?>
+                </td>
+            </tr>    
             <tr>
                 <td>Photo de profil</td>
                 <td>
