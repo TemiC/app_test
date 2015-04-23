@@ -1,15 +1,6 @@
 <?php
 
-// On importe bien le SDK Facebook
-require 'lib/facebook/facebook.php';
-
-// Vous devez impérativement créer une instance d'application en y 
-// paramétrant votre AppID et votre clé secrète disponible 
-// dans le tableau de bord de votre application
-$facebook = new Facebook(array(
-  'appId'  => '265759206947518',
-  'secret' => 'VOTRE_CLE_SECRETE',
-));
+require_once("session.php"); 
 
 // On essaye ensuite de récupérer l'utilisateur identifié au moyen de 
 // la méthode getUser()
