@@ -3,14 +3,6 @@
 require_once("session.php"); 
 
 if(isset($session)) {
-		try {	
-			$user_profile = (new FacebookRequest(
-			$session, 'GET', '/me'
-			))->execute()->getGraphObject(GraphUser::className());
-		} 
-		catch(FacebookRequestException $e) {
-		} 
-		
 		//require_once("MyDB.php");
 		$_SESSION['fb_token'] = (string) $session->getAccessToken();
 		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());  //get user informations 
