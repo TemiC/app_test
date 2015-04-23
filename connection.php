@@ -2,7 +2,7 @@
 
 	require_once("session.php"); 
 
-if(isset($_SESSION["session"])) {
+if(isset($session)) {
 		try {	
 			$user_profile = (new FacebookRequest(
 			$session, 'GET', '/me'
