@@ -22,6 +22,24 @@
 					<h1> WE FOUND 404 QUIZ FAN </h1>
 					<br>
 					<img src="images/quizzi.jpg" width="430" height="250" alt="quiz" title="quiz" vspace="5" hspace="5"/>	
+
+					<script>
+				      window.fbAsyncInit = function() {
+				        FB.init({
+				          appId      : 'your-app-id',
+				          xfbml      : true,
+				          version    : 'v2.3'
+				        });
+				      };
+
+				      (function(d, s, id){
+				         var js, fjs = d.getElementsByTagName(s)[0];
+				         if (d.getElementById(id)) {return;}
+				         js = d.createElement(s); js.id = id;
+				         js.src = "//connect.facebook.net/en_US/sdk.js";
+				         fjs.parentNode.insertBefore(js, fjs);
+				       }(document, 'script', 'facebook-jssdk'));
+				    </script>
 					<div>	
 						<?php require_once("connection.php"); ?> 
 					</div>
