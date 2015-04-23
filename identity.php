@@ -74,7 +74,11 @@
             </tr>  
           </tbody>
         </table>
-      </div>        
+      </div>   
+      <?php 
+       
+        <a target="_top" href="<?php echo $loginUrl; ?>">Connexion</a>
+      ?>     
  </div>
   </body>
 </html>
