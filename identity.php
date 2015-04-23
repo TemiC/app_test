@@ -19,17 +19,7 @@
     <body>
     <div id="fb-root"></div>
      
-     <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1560387527551071',
-          xfbml      : true,
-          version    : 'v2.3'
-        });
-      };
-      </script>
-                 
-    <div id="container">
+     
       <div id="parent">
         <img src= "images/404.jpeg" width="100" height="100" alt="quiz" title="logo" vspace="5" hspace="5"/>
       </div>
@@ -81,15 +71,7 @@
                 <td>Commentaire</td>
                 <td>
 
-                  <script>
-                  (function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = "http://hidden-retreat-3686.herokuapp.com/identity.php";
-                    fjs.parentNode.insertBefore(js, fjs);
-                  }(document, 'script', 'facebook-jssdk'));
-                  </script>
+
                 </td>
             </tr>  
           </tbody>
@@ -98,3 +80,31 @@
  </div>
   </body>
 </html>
+
+<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1560387527551071',
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+      </script>
+                 
+    <div id="container">
+
+
+
+<script>
+                  (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "http://hidden-retreat-3686.herokuapp.com/identity.php";
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+
