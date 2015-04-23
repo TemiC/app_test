@@ -39,14 +39,15 @@
             </tr>
           </thead>
           <tbody>
+          <tr>
+                <td>Prénom</td>
+                <td><?php echo $_SESSION['name'] ?></td>
+            </tr>
             <tr>
                 <td>ID</td>
                 <td><?php echo $user_profile->getProperty('id');?></td>
             </tr>
-            <tr>
-                <td>Prénom</td>
-                <td><?php echo $user_profile->getProperty('fname');?></td>
-            </tr>
+            
             <tr>
                 <td>Nom</td>
                 <td>
