@@ -1,7 +1,7 @@
 <?php
 
 require_once("session.php"); 
-
+echo "test in";
 // On essaye ensuite de récupérer l'utilisateur identifié au moyen de 
 // la méthode getUser()
 $user = $facebook->getUser();
