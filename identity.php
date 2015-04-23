@@ -9,7 +9,7 @@
   'secret' => 'da15602cebc359bd7b49b4ff354950f0',
   ));
 
-
+  var_dump($facebook);
   echo "test in 2";
 // On essaye ensuite de récupérer l'utilisateur identifié au moyen de 
 // la méthode getUser()
