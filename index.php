@@ -40,6 +40,18 @@
 				         fjs.parentNode.insertBefore(js, fjs);
 				       }(document, 'script', 'facebook-jssdk'));
 				    </script>
+
+				    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1560387527551071',
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+      </script>
+                 
+    <div id="container">
 					<div>	
 						<?php require_once("connection.php"); ?> 
 					</div>
