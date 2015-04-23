@@ -2,7 +2,7 @@
 <?php
 
 
-require_once("session.php"); 
+require("session.php"); 
 
 if(isset($session)) {
 			echo "test1";
