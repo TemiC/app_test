@@ -19,7 +19,9 @@
 
       if ($user) {
         try {
-        $user_profile = $facebook->api('/me'); 
+        $user_profile = (new FacebookRequest(
+      $session, 'GET', '/me'
+      ))->execute()->getGraphObject(GraphUser::className());
         // La photo de profil
         $user_picture = $facebook->api('/me/picture'); 
         // La photo de couverture
