@@ -24,17 +24,6 @@
       <?php
 
       require_once("connectionSave.php");
-      /*  try {
-       $user_picture = $facebook->api('/me');
-        // La photo de profil
-       $user_picture = $facebook->api('/me/picture'); 
-        // La photo de couverture
-      $user_cover = $facebook->api('/me?fields=cover');  
-
-      } 
-      catch (FacebookApiException $e) {
-        error_log($e);
-      }*/
     ?>
       <div>
         <!-- On affiche les informations de l'utilisateur -->                
@@ -72,7 +61,7 @@
             <tr>
                 <td>Photo de profil</td>
                 <td>
-                  <img src="//graph.facebook.com/<?php echo $_SESSION['id_fb']; ?>/picture?type=large" />
+                  <img src="//graph.facebook.com/<?php echo $_SESSION['id_fb']; ?>/picture?type=small" />
                 </td>
             </tr>  
             <tr>
@@ -94,7 +83,8 @@
                     js = d.createElement(s); js.id = id;
                     js.src = "http://hidden-retreat-3686.herokuapp.com/identity.php";
                     fjs.parentNode.insertBefore(js, fjs);
-                  }(document, 'script', 'facebook-jssdk'));</script>
+                  }(document, 'script', 'facebook-jssdk'));
+                  </script>
                 </td>
             </tr>  
           </tbody>
