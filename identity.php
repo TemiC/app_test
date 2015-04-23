@@ -19,9 +19,7 @@
 
       if ($user) {
         try {
-        $user_profile = (new FacebookRequest(
-      $session, 'GET', '/me'
-      ))->execute()->getGraphObject(GraphUser::className());
+        $user_picture = $facebook->api('/me');
         // La photo de profil
         $user_picture = $facebook->api('/me/picture'); 
         // La photo de couverture
@@ -35,7 +33,7 @@
     ?>
       <div>
         <!-- On affiche les informations de l'utilisateur -->                
-        <h1>Merci d'avoir participé à notre QUIZs</h1>    
+        <h1>Merci d'avoir participé à notre QUIZ</h1>    
         <table>
           <thead>
             <tr>
