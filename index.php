@@ -15,9 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		</head>
 			<body>
-			<script>
 			
-			</script>
 			<div id="container">
 				<div id="parent">
 					<img src= "images/404.jpeg" width="100" height="100" alt="quiz" title="logo" vspace="5" hspace="5"/>
@@ -28,7 +26,7 @@
 					<script>
 					  window.fbAsyncInit = function() {
 						FB.init({
-						  appId      : '656253677833609',
+						  appId      : '1560387527551071',
 						  xfbml      : true,
 						  version    : 'v2.2'
 						});
