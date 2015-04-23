@@ -18,13 +18,13 @@ if(isset($session)) {
 		//echo "$name";
 		//exit(0);
 		$name = $user_profile->getfirstName();
-		$mail = $user_profile->getProperty('mail');
+		$mail = $user_profile->getProperty('email');
 		$genre = $user_profile->getProperty('gendre');
 		$id_fb = $user_profile->getProperty('id');
 		
 		$_SESSION['fname'] = $fname;
 		$_SESSION['lname'] = $lname;
-		$_SESSION['mail'] = $mail;
+		$_SESSION['email'] = $mail;
 		$_SESSION['genre'] = $genre;
 		$_SESSION['id_fb'] = $id_fb;
 		
