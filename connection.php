@@ -30,7 +30,7 @@ if(isset($session)) {
 		
 		
 	
-	function ckeckUser($id_fb, $genre, $mail, $name){
+	/*function ckeckUser($id_fb, $genre, $mail, $name){
 		$dbhandle = new SQLite3('quizz.db');
 		if (!$dbhandle){
 			die ('error came');
@@ -50,7 +50,7 @@ if(isset($session)) {
 			}
 		}
 		sqlite_close($dbhandle);
-	}
+	}*/
 	}
 	else {
 		$loginUrl = $helper->getLoginUrl($permission);
