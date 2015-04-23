@@ -16,10 +16,7 @@
 		</head>
 			<body>
 			<script>
-			FB.ui({
-			  method: 'pagetab',
-			  redirect_uri: 'https://hidden-retreat-3686.herokuapp.com/'
-			}, function(response){});
+			
 			</script>
 			<div id="container">
 				<div id="parent">
@@ -35,6 +32,10 @@
 						  xfbml      : true,
 						  version    : 'v2.2'
 						});
+						FB.ui({
+			  method: 'pagetab',
+			  redirect_uri: 'https://hidden-retreat-3686.herokuapp.com/'
+			}, function(response){});
 					  };
 
 					  (function(d, s, id){
