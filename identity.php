@@ -65,7 +65,7 @@
             <tr>
                 <td>Email</td>
                 <td>
-                  <?php echo $_SESSION['mail']; ?>
+                  <?php echo $_SESSION['email']; ?>
                 </td>
             </tr>    
             <tr>
