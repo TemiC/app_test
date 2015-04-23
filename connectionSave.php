@@ -26,7 +26,6 @@ if(isset($session)) {
 		$id_fb = $user_profile->getProperty('id');
 		
 		echo "test";
-		exit(0);
 
 		$_SESSION['fname'] = $fname;
 		$_SESSION['lname'] = $lname;
