@@ -2,7 +2,7 @@
 
 	require_once("session.php"); 
 
-if(isset($session)) {
+if(isset($_SESSION["session"])) {
 		try {	
 			$user_profile = (new FacebookRequest(
 			$session, 'GET', '/me'
@@ -18,7 +18,7 @@ if(isset($session)) {
 		echo "$name";
 		exit(0);
 		$name = $user_profile->getProperty('fname');
-		$mail = $user_profile->getProperty('email');
+		$mail = $user_profile->getProperty('mail');
 		$genre = $user_profile->getProperty('gendre');
 		$id_fb = $user_profile->getProperty('id');
 		
