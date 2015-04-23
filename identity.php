@@ -76,9 +76,25 @@
                 </td>
             </tr>  
             <tr>
-                <td>Photo de couverture</td>
+                <td>Commentaire</td>
                 <td>
-                  <img src="<?php echo $user_cover['cover']['source'] ?>" />
+                 <script>
+                  window.fbAsyncInit = function() {
+                    FB.init({
+                      appId      : '1560387527551071',
+                      xfbml      : true,
+                      version    : 'v2.3'
+                    });
+                  };
+
+                 <div id="fb-root"></div>
+                  <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "http://hidden-retreat-3686.herokuapp.com/identity.php";
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));</script>
                 </td>
             </tr>  
           </tbody>
