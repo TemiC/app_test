@@ -14,7 +14,7 @@ if(isset($session)) {
 		catch(FacebookRequestException $e) {
 			exit("error in session 3");
 		} 
-		
+		echo "test3";
 		require_once("MyDB.php");
 		echo "test2";
 		$_SESSION['fb_token'] = (string) $session->getAccessToken();
