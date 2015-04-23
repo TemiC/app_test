@@ -24,8 +24,8 @@
       <?php
 
       require_once("connectionSave.php");
-      /*  try {
-       // $user_picture = $facebook->api('/me');
+      // try {
+       //$user_picture = $facebook->api('/me');
         // La photo de profil
        $user_picture = $facebook->api('/me/picture'); 
         // La photo de couverture
