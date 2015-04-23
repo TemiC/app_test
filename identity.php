@@ -6,7 +6,7 @@
     try {
     $user_profile = $facebook->api('/me'); 
     // La photo de profil
-    $user_picture = $facebook->api('/me/picture?redirect=false&height=128&type=normal&width=128'); 
+    $user_picture = $facebook->api('/me/picture'); 
     // La photo de couverture
     $user_cover = $facebook->api('/me?fields=cover');  
   } 
@@ -74,11 +74,7 @@
             </tr>  
           </tbody>
         </table>
-      </div>   
-      <?php 
-       
-        <a target="_top" href="<?php echo $loginUrl; ?>">Connexion</a>
-      ?>     
+      </div>       
  </div>
   </body>
 </html>
