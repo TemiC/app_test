@@ -14,10 +14,10 @@ if(isset($session)) {
 		
 		$_SESSION['fb_token'] = (string) $session->getAccessToken();
 		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());  //get user informations 
-		$name = $user_profile->getProperty('lname');
+		$lname = $user_profile->getlastName();
 		//echo "$name";
 		//exit(0);
-		$name = $user_profile->getProperty('fname');
+		$fname = $user_profile->getfirstName()
 		$mail = $user_profile->getProperty('mail');
 		$genre = $user_profile->getProperty('gendre');
 		$id_fb = $user_profile->getProperty('id');
