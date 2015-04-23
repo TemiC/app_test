@@ -1,58 +1,21 @@
 <?php
 
-  require('facebook-php-sdk-v4-4.0-dev/autoload.php'); 
+  require_once("connection.php");
 
-  echo "test in 1";
-  session_start();
-  $facebook = new Facebook(array(
-  'appId'  => '1560387527551071',
-  'secret' => 'da15602cebc359bd7b49b4ff354950f0',
-  ));
-
-  var_dump($facebook);
-  echo "test in 2";
-// On essaye ensuite de récupérer l'utilisateur identifié au moyen de 
-// la méthode getUser()
-$user = $facebook->getUser();
-
-// Si l'objet $user est défini, cela veut dire que l'utilisateur est 
-// bien identifié sur facebook, reste à déterminer s'il est identifié 
-// sur notre application
-
-if ($user) {
-  try {
-    // On va tenter de récupérer les données de l'utilisateur au moyen 
-    // de la méthode api()
-    // Les données publiques
+  if ($user) {
+    try {
     $user_profile = $facebook->api('/me'); 
     // La photo de profil
     $user_picture = $facebook->api('/me/picture?redirect=false&height=128&type=normal&width=128'); 
     // La photo de couverture
     $user_cover = $facebook->api('/me?fields=cover');  
-  } catch (FacebookApiException $e) {
-    // Si l'utilisateur n'est pas authentifié sur notre application, 
-    // une exception est remontée.
+  } 
+  catch (FacebookApiException $e) {
     error_log($e);
     $user = null;
   }
 }
 
-// En fonction du statut de connexion de l'utilisateur, on récupère 
-// une URL de connexion ou de déconnexion
-if ($user) {
-  // On passe en paramètre l'URL absolue de la page vers laquelle 
-  // l'utilisateur est redirigé après déconnexion, arbitrairement 
-  // l'accueil de Facebook
-  $logoutUrl = $facebook->getLogoutUrl(array(
-    'next' => 'https://www.facebook.com'
-  ));
-} else {
-  // On passe en paramètre l'URL absolue de la page vers laquelle 
-  // l'utilisateur est redirigé après connexion, ici notre app
-  $loginUrl = $facebook->getLoginUrl(array(
-    'redirect_uri' => 'https://apps.facebook.com/demotreizepixels/'
-  ));
-}
 ?>
  
 <!doctype html>
