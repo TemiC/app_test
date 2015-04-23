@@ -17,17 +17,7 @@
     </head>
 
     <body>
-    <div id="fb-root"></div>
-     
-     <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1560387527551071',
-          xfbml      : true,
-          version    : 'v2.3'
-        });
-      };
-      </script>
+    
                  
     <div id="container">
       <div id="parent">
@@ -80,7 +70,17 @@
             <tr>
                 <td>Commentaire</td>
                 <td>
-
+                  <div id="fb-root"></div>
+     
+               <script>
+                window.fbAsyncInit = function() {
+                  FB.init({
+                    appId      : '1560387527551071',
+                    xfbml      : true,
+                    version    : 'v2.3'
+                  });
+                };
+                </script>
                   <script>
                   (function(d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0];
@@ -93,12 +93,12 @@
 
 
                   <div
-  class="fb-like"
-  data-send="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
+                    class="fb-like"
+                    data-send="true"
+                    data-width="450"
+                    data-show-faces="true">
+                  </div>
+                  <div class="fb-comments" data-href="http://hidden-retreat-3686.herokuapp.com/identity.php" "data-numpost=3 data-colorschema="light"> </div>
                 </td>
             </tr>  
           </tbody>
