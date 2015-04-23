@@ -1,10 +1,12 @@
 <?php
 
   require('facebook-php-sdk-v4-4.0-dev/autoload.php'); 
-  session_start();
-  $appId = '1560387527551071'; 
-  $appSecret = 'da15602cebc359bd7b49b4ff354950f0';
-echo "test in";
+  $facebook = new Facebook(array(
+  'appId'  => '1560387527551071',
+  'secret' => 'da15602cebc359bd7b49b4ff354950f0',
+));
+
+  echo "test in";
 // On essaye ensuite de récupérer l'utilisateur identifié au moyen de 
 // la méthode getUser()
 $user = $facebook->getUser();
