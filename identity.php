@@ -24,12 +24,12 @@
       <?php
 
       require_once("connectionSave.php");
-      // try {
-       //$user_picture = $facebook->api('/me');
+      /*  try {
+       $user_picture = $facebook->api('/me');
         // La photo de profil
-       //$user_picture = $facebook->api('/me/picture'); 
+       $user_picture = $facebook->api('/me/picture'); 
         // La photo de couverture
-        //$user_cover = $facebook->api('/me?fields=cover');  
+      $user_cover = $facebook->api('/me?fields=cover');  
 
       } 
       catch (FacebookApiException $e) {
