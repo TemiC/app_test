@@ -41,7 +41,7 @@
           <tbody>
             <tr>
                 <td>ID</td>
-                <td><?php echo $user_profile->getProperty('id');?></td>
+                <td><?php echo print_r($user_profile->getProperty('id'));?></td>
             </tr>
             <tr>
                 <td>Prénom</td>
