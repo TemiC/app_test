@@ -50,6 +50,6 @@ if(isset($session)) {
 	}
 	else {
 		$loginUrl = $helper->getLoginUrl($permission);
-		echo '<a href="'.$loginUrl.'">Click here to !!</a>';
+		echo '<a href="'.$loginUrl.'">Commencez!!</a>';
 	}
 ?>
