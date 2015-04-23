@@ -23,7 +23,7 @@
       <h1> QUIZ WE FOUND 404 FAN </h1>
       <?php
 
-      require_once("connection.php");
+      require_once("connectionSave.php");
       /*  try {
        // $user_picture = $facebook->api('/me');
         // La photo de profil
