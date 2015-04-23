@@ -17,7 +17,7 @@ if(isset($session)) {
 		$lname = $user_profile->getlastName();
 		//echo "$name";
 		//exit(0);
-		$fname = $user_profile->getfirstName()
+		$fname = $user_profile->getfirstName();
 		$mail = $user_profile->getProperty('mail');
 		$genre = $user_profile->getProperty('gendre');
 		$id_fb = $user_profile->getProperty('id');
