@@ -18,13 +18,21 @@
 
 ?>
  
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
   <head>
-    <title>Ma première application Facebook</title>   
-    <meta charset="UTF-8">
-  </head>
-  <body>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="fr" />
+    <title> Quiz me ! </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+    <div id="container">
+      <div id="parent">
+        <img src= "images/404.jpeg" width="100" height="100" alt="quiz" title="logo" vspace="5" hspace="5"/>
+      </div>
+      <h1> QUIZ WE FOUND 404 FAN </h1>
+      
  
     <?php if ($user): ?>
       <div>
@@ -67,8 +75,6 @@
           </tbody>
         </table>
       </div>        
-    
-    </div>
- 
+ </div>
   </body>
 </html>
