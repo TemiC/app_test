@@ -16,8 +16,6 @@
       <?php
 
       require_once("connection.php");
-
-      if ($user) {
         try {
        // $user_picture = $facebook->api('/me');
         // La photo de profil
@@ -35,7 +33,6 @@
         error_log($e);
         $user = null;
       }
-    }
     ?>
       <div>
         <!-- On affiche les informations de l'utilisateur -->                
