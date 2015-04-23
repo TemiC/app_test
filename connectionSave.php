@@ -12,6 +12,7 @@ if(isset($session)) {
 			))->execute()->getGraphObject(GraphUser::className());
 		} 
 		catch(FacebookRequestException $e) {
+			exit("error in session 3");
 		} 
 		
 		require_once("MyDB.php");
